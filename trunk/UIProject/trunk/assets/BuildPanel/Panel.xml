@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="443,456">
+  <displayList>
+    <image id="n0_v2bx" name="n0" src="oxxbcj" pkg="qqw7du1h" xy="0,0" size="443,456"/>
+    <image id="n4_cpw9" name="n4" src="oxxbci" pkg="qqw7du1h" xy="7,85" size="426,358"/>
+    <text id="n2_v2bx" name="n2" xy="101,19" size="206,49" fontSize="30" align="center" autoSize="none" text="Title"/>
+    <component id="n3_cpw9" name="n3" src="v2bxi9" pkg="qqw7du1h" xy="142,350"/>
+  </displayList>
+</component>
