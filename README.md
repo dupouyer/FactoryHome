@@ -31,3 +31,39 @@ How
 
 * Repo owner or admin
 * Other community or team contact
+
+# Framework #
+
+### Globals  
+* 放置一些全局功能的引用
+
+### PanelManager
+* 界面管理
+* 创建界面
+* 显示关闭界面
+
+### LoaderManager
+* 资源加载
+
+### ObjectManager
+* 管理物件
+* 创建物件
+* 销毁物件
+
+### Object
+ 一个物件,可通过配置实例化所属 GameObject
+
+### ModeConfig
+一个 GameObject 的配置,可通过此配置生产一个 GameObject
+
+### Transport
+传送带功能
+
+### Arm
+机械臂功能
+
+### Factory
+工厂功能，可通过 Blueprint 生产物件
+
+### Blueprint
+一个物件的蓝图
