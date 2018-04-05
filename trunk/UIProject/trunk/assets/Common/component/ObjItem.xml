@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="60,60" extention="Button">
+  <displayList>
+    <image id="n0_pkm4" name="bg" src="oxxbch" xy="0,0"/>
+    <loader id="n1_pkm4" name="icon" xy="4,4" size="52,52" fill="scale"/>
+  </displayList>
+  <Button mode="Radio" downEffect="scale" downEffectValue="1.20"/>
+</component>

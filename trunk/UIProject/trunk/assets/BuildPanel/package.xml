@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="qhjxum9h" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="ugok0" name="Panel.xml" path="/" exported="true"/>
+    <component id="ugok0" name="Panel.xml" path="/"/>
   </resources>
-  <publish name="BuildPanel" genCode="true"/>
+  <publish name="BuildPanel"/>
 </packageDescription>

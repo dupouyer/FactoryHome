@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <image id="n23_hz00" name="list" src="oxxbci" pkg="qqw7du1h" xy="290,667" size="756,80"/>
+    <list id="n21_hz00" name="objBar" xy="300,679" size="737,70" layout="row" colGap="10" defaultItem="ui://qqw7du1hpkm4ib" align="center" vAlign="middle">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n24_hz00" name="n24" src="hz006" xy="71,495" scale="0.5,0.5"/>
+    <component id="n25_hz00" name="n25" src="hz007" xy="178,498" scale="0.5,0.5"/>
+    <component id="n26_hz00" name="n26" src="hz005" xy="126,447" scale="0.5,0.5"/>
+    <component id="n27_hz00" name="n27" src="hz008" xy="125,546" scale="0.5,0.5"/>
+  </displayList>
+</component>

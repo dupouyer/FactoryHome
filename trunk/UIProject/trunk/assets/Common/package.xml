@@ -224,6 +224,7 @@
     <image id="oxxbi4" name="UI_Icon_ZoomIn.png" path="/Icons/" exported="true"/>
     <image id="oxxbi5" name="UI_Icon_ZoomOut.png" path="/Icons/" exported="true"/>
     <component id="v2bxi9" name="Button.xml" path="/component/" exported="true"/>
+    <component id="pkm4ib" name="ObjItem.xml" path="/component/" exported="true"/>
   </resources>
-  <publish name="Common"/>
+  <publish name="Common" genCode="true"/>
 </packageDescription>

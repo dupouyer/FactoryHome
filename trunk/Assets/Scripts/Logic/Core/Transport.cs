@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // 搬运组件
-public class Transport : MonoBehaviour {
-    // speed of transport
-    public float speed = 0.3f;
-
+public class Transport : EntityBase {
 	// Use this for initialization
 	void Start () {
 		
@@ -19,7 +16,7 @@ public class Transport : MonoBehaviour {
 
     private void OnTriggerStay(Collider other) {
         Debug.Log("onTrigger");
-        other.transform.Translate(transform.forward * speed * Time.deltaTime);
+        other.transform.Translate(transform.forward * workSpeed * Time.deltaTime);
     }
 
     private void OnCollisionStay(Collision collision) {

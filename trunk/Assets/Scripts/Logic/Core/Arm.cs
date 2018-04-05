@@ -2,18 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Arm : MonoBehaviour {
-    List<Collider> colliders = new List<Collider>();
-
+public class Arm : EntityBase {
     Animator animator;
 
     int IDLE_HASH;
     int RUN_HASH;
 
     int HAS_CARGO_ENUM;
-    bool hasCargo = false;
 
-    Transform arm;
+    // 抓取货物的位置
+    Transform fingerPoint;
+    HitBox cargoBuffer;
 
 	// Use this for initialization
 	void Start () {
@@ -21,30 +20,27 @@ public class Arm : MonoBehaviour {
         IDLE_HASH = Animator.StringToHash("Idle");
         RUN_HASH = Animator.StringToHash("Run");
         HAS_CARGO_ENUM = Animator.StringToHash("hasCargo");
-        arm = transform.GetChild(0);
+        fingerPoint = transform.GetChild(0);
+        cargoBuffer = transform.GetComponentInChildren<HitBox>();
 	}
 
     // Update is called once per frame
     void Update() {
-        if (animator.GetCurrentAnimatorStateInfo(0).shortNameHash == IDLE_HASH && colliders.Count > 0 && !hasCargo) {
-            Collider c = colliders[0];
-            c.transform.SetParent(arm);
-            hasCargo = true;
+        if (animator.GetCurrentAnimatorStateInfo(0).shortNameHash == IDLE_HASH && cargoBuffer.hit.Count > 0 && !isWorking) {
+            GameObject cargo = cargoBuffer.hit[0];
+            // 货物绑定在手指上
+            cargo.transform.SetParent(fingerPoint);
+            isWorking = true;
         }
-        else if (animator.GetCurrentAnimatorStateInfo(0).shortNameHash == RUN_HASH && hasCargo) {
+        else if (animator.GetCurrentAnimatorStateInfo(0).shortNameHash == RUN_HASH && isWorking ) {
             if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1.0f) {
-                hasCargo = false;
-                arm.GetChild(0).transform.SetParent(null);
+                isWorking = false;
+                GameObject cargo = fingerPoint.GetChild(0).gameObject;
+                // 从手指上移除
+                cargo.transform.SetParent(null);
             }
         }
-            animator.SetBool(HAS_CARGO_ENUM, hasCargo);
+
+        animator.SetBool(HAS_CARGO_ENUM, isWorking);
 	}
-
-    private void OnTriggerEnter(Collider other) {
-        colliders.Add(other);
-    }
-
-    private void OnTriggerExit(Collider other) {
-        colliders.Remove(other);
-    }
 }
