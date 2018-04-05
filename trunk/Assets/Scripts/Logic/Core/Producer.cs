@@ -22,6 +22,8 @@ public class Producer : EntityBase {
 	void Update () {
         if (isWorking) {
             workingTime += workSpeed * Time.deltaTime;
+
+            Debug.Log("working:" + workingTime);
         }
         else {
             workingTime = 0f;
@@ -52,10 +54,26 @@ public class Producer : EntityBase {
             outSlot = Globals.entityManager.Create(blueprint.outEntity.id, blueprint.outNum);
         }
 
+        Debug.Log("produce:" + outSlot.id);
+
         outSlot.num += blueprint.outNum;
+
+        Globals.entityManager.instantiateEntity(outSlot, false, gameObject.transform.position);
     }
 
-    private void OnTriggerEnter(Collider other) {
-    }
+    override public void pushEntity(Entity entity, int num) {
+        Debug.Log("push:" + entity.id + "," + num);
+        int index = slotMap[entity.id];
+        if (index >= 0) {
+            inSlot[index] = entity;
+        }
 
+        isWorking = true;
+        for (int i = 0; i < inSlot.Length; i++) {
+            if (inSlot[i] == null) {
+                isWorking = false;
+                break;
+            }
+        }
+    }
 }

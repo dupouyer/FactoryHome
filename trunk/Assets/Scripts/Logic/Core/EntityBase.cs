@@ -23,10 +23,13 @@ public class EntityBase : MonoBehaviour {
 	}
 
     // 放置物体
-    public void pushEntity() {
+    virtual public void pushEntity(Entity entity, int num) {
+        // 由子类实现
     }
 
-    // 取出物体
-    public void drawEntity() {
+    public void pushEntity(GameObject gameObject) {
+        Entity e = Globals.entityManager.getEntityByGameObject(gameObject);
+        Globals.entityManager.restoreEntityInstance(gameObject);
+        pushEntity(e, 1);
     }
 }

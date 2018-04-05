@@ -10,10 +10,29 @@ public class EntityManager {
         return obj;
     }
 
-    public GameObject instantiateOneEntity(Entity entity, bool isArch, Vector3 pos) {
+    Dictionary<int, Entity> entityInstMap = new Dictionary<int, Entity>();
+
+    public GameObject instantiateEntity(Entity entity, bool isArch, Vector3 pos) {
+        entity.num -= 1;
+
+        // 实例化显示对象
         GameObject gobj = Object.Instantiate(isArch && entity.config.archPrefab ? entity.config.archPrefab : entity.config.meterialPrefab);
         pos.y += entity.config.offsetY;
         gobj.transform.position = pos;
+        entityInstMap.Add(gobj.GetInstanceID(), entity);
+
         return gobj;
+    }
+
+    // 还原物体的实例
+    public void restoreEntityInstance(GameObject gameObject) {
+        Entity entity = entityInstMap[gameObject.GetInstanceID()];
+        entity.num += 1;
+        GameObject.Destroy(gameObject);
+    }
+
+    public Entity getEntityByGameObject(GameObject gameObject) {
+        int id = gameObject.GetInstanceID();
+        return entityInstMap[id];
     }
 }

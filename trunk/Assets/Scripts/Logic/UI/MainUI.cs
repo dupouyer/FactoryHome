@@ -29,7 +29,7 @@ public class MainUI : Window{
 
     void handlerClickFloor(Vector3 point) {
         if (list.selectedIndex >=0) {
-            Globals.entityManager.instantiateOneEntity(objList[list.selectedIndex], true, point);
+            Globals.entityManager.instantiateEntity(objList[list.selectedIndex], true, point);
         }
     }
 
