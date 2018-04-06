@@ -445,6 +445,7 @@
     <Compile Include="Assets\Scripts\Logic\Core\Arm.cs" />
     <Compile Include="Assets\Scripts\Logic\Core\EntityBase.cs" />
     <Compile Include="Assets\Scripts\Logic\Core\HitBox.cs" />
+    <Compile Include="Assets\Scripts\Logic\Core\MiningDrill.cs" />
     <Compile Include="Assets\Scripts\Logic\Core\Producer.cs" />
     <Compile Include="Assets\Scripts\Logic\Core\Transport.cs" />
     <Compile Include="Assets\Scripts\Logic\UI\ArchPanel.cs" />

@@ -22,6 +22,7 @@ public class MainUI : Window{
         Globals.entityManager.CreateToSlot("burner-inserter", 10, slotList[2]);
         Globals.entityManager.CreateToSlot("stone-furnace", 10, slotList[3]);
         Globals.entityManager.CreateToSlot("transport-belt", 10, slotList[4]);
+        Globals.entityManager.CreateToSlot("burner-mining-drill", 10, slotList[5]);
     }
 
     protected override void OnInit() {
