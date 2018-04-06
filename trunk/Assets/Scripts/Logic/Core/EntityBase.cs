@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class EntityBase : MonoBehaviour {
     // 输入插槽
-    public Entity[] inSlot;
+    public Slot[] inSlots;
     // 输出插槽
-    public Entity outSlot;
+    public Slot outSlot;
+
     // 工作速度
     public float workSpeed = 1;
     // 工作时间
@@ -21,15 +22,4 @@ public class EntityBase : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	}
-
-    // 放置物体
-    virtual public void pushEntity(Entity entity, int num) {
-        // 由子类实现
-    }
-
-    public void pushEntity(GameObject gameObject) {
-        Entity e = Globals.entityManager.getEntityByGameObject(gameObject);
-        Globals.entityManager.restoreEntityInstance(gameObject);
-        pushEntity(e, 1);
-    }
 }

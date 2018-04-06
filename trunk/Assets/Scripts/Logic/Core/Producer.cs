@@ -5,25 +5,26 @@ using UnityEngine;
 public class Producer : EntityBase {
     public BlueprintConfig blueprint;
 
-    Dictionary<string, int> slotMap;
-
 	// Use this for initialization
 	void Start () {
         // 输入插槽的数量对应蓝图中的需求数量
-        inSlot = new Entity[blueprint.inEntities.Length];
-        slotMap = new Dictionary<string, int>();
-        // 建立这个蓝图的输入和输入插槽的隐射关系
+        inSlots = new Slot[blueprint.inEntities.Length];
+
+        // 初始化插槽
         for (int i = 0; i < blueprint.inEntities.Length; i++) {
-            slotMap.Add(blueprint.inEntities[i].id, i);
+            inSlots[i] = new Slot() {
+                entity = Globals.entityManager.GetEntity(blueprint.inEntities[i].id)
+            };
         }
-	}
+        outSlot = new Slot {
+            entity = Globals.entityManager.GetEntity(blueprint.outEntity.id)
+        };
+    }
 
 	// Update is called once per frame
 	void Update () {
         if (isWorking) {
             workingTime += workSpeed * Time.deltaTime;
-
-            Debug.Log("working:" + workingTime);
         }
         else {
             workingTime = 0f;
@@ -31,8 +32,11 @@ public class Producer : EntityBase {
 
         if (workingTime > blueprint.time) {
             workingTime -= blueprint.time;
-
-            produce();
+            resetWorkingState();
+            if (isWorking) {
+                produce();
+                resetWorkingState();
+            }
         }
     }
 
@@ -41,7 +45,7 @@ public class Producer : EntityBase {
         isWorking = true;
 
         for (int i = 0; i < blueprint.inEntities.Length; i++) {
-            if (inSlot[i].num < blueprint.inNums[i]) {
+            if (inSlots[i].num < blueprint.inNums[i]) {
                 isWorking = false;
                 break;
             }
@@ -50,28 +54,18 @@ public class Producer : EntityBase {
 
     // 产出产品
     void produce() {
-        if (outSlot == null) {
-            outSlot = Globals.entityManager.Create(blueprint.outEntity.id, blueprint.outNum);
-        }
-
-        Debug.Log("produce:" + outSlot.id);
-
-        outSlot.num += blueprint.outNum;
-
-        Globals.entityManager.instantiateEntity(outSlot, false, gameObject.transform.position);
+        Globals.entityManager.produceEntity(blueprint, inSlots, outSlot);
+        outSlot.instantiateEntity(false, transform.position);
     }
 
-    override public void pushEntity(Entity entity, int num) {
-        Debug.Log("push:" + entity.id + "," + num);
-        int index = slotMap[entity.id];
-        if (index >= 0) {
-            inSlot[index] = entity;
-        }
+    public void pushEntity(GameObject gameObject) {
+        Entity entity = Globals.entityManager.getEntityByGameObject(gameObject);
 
-        isWorking = true;
-        for (int i = 0; i < inSlot.Length; i++) {
-            if (inSlot[i] == null) {
-                isWorking = false;
+        for (int i = 0; i < inSlots.Length; i++) {
+            if (inSlots[i].entity.id == entity.id) {
+                inSlots[i].pushEntity(gameObject);
+                // 有新的材料进入，重设一下工作状态
+                resetWorkingState();
                 break;
             }
         }

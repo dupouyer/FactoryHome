@@ -9,6 +9,7 @@ namespace Common
 	{
 		public GImage m_bg;
 		public GLoader m_icon;
+		public GTextField m_num;
 
 		public const string URL = "ui://qqw7du1hpkm4ib";
 
@@ -27,6 +28,7 @@ namespace Common
 
 			m_bg = (GImage)this.GetChildAt(0);
 			m_icon = (GLoader)this.GetChildAt(1);
+			m_num = (GTextField)this.GetChildAt(2);
 		}
 	}
 }

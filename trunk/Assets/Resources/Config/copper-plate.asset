@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Name: copper-plate
   m_EditorClassIdentifier: 
   archPrefab: {fileID: 0}
-  meterialPrefab: {fileID: 0}
+  meterialPrefab: {fileID: 1020393411439010, guid: d12359c284d615444917c408a2c6eca1,
+    type: 2}
   offsetY: 0.3
