@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="128,128">
+<component size="128,128" extention="Button">
   <displayList>
     <image id="n26_hz00" name="n26" src="oxxbct" pkg="qqw7du1h" xy="0,0"/>
   </displayList>
+  <Button downEffect="dark" downEffectValue="0.80"/>
 </component>
