@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1334,750">
+<component size="1334,750" opaque="false">
   <displayList>
     <image id="n23_hz00" name="list" src="oxxbci" pkg="qqw7du1h" xy="290,667" size="756,80"/>
     <list id="n21_hz00" name="objBar" xy="300,679" size="737,70" layout="row" colGap="10" defaultItem="ui://qqw7du1hpkm4ib" align="center" vAlign="middle">

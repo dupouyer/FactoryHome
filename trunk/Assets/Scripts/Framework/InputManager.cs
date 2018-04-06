@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using FairyGUI;
 
 public class InputManager:MonoBehaviour{
     public delegate void OnClickFloorDelegate(Vector3 point);
@@ -9,7 +10,6 @@ public class InputManager:MonoBehaviour{
     private event OnUpdateDelegate onUpdate;
 
     Plane floor;
-    Vector3 m_DistanceFromCamera;
 
     void Start() {
         floor = new Plane(Vector3.up, Vector3.zero);
@@ -17,7 +17,7 @@ public class InputManager:MonoBehaviour{
 
     void Update() {
         //Detect when there is a mouse click
-        if (Input.GetMouseButtonUp(0)) {
+        if (Input.GetMouseButtonUp(0) && !Stage.isTouchOnUI) {
             //Create a ray from the Mouse click position
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             //Initialise the enter variable
