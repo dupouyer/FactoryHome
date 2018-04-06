@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EntityBase : MonoBehaviour {
+    public enum DIRECTION {
+        LEFT = 1,
+        UP = 2,
+        RIGHT = 3,
+        DOWN = 4
+    };
+
     // 输入插槽
     public Slot[] inSlots;
     // 输出插槽
@@ -15,11 +22,22 @@ public class EntityBase : MonoBehaviour {
     // 工作中
     public bool isWorking;
 
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
+    public DIRECTION direction {
+        get {
+            return (DIRECTION)Mathf.Ceil(gameObject.transform.rotation.eulerAngles.y / 90 + 1f);
+        }
+    }
+
+    public void changeDirection(DIRECTION direction) {
+        gameObject.transform.Rotate(new Vector3(0, ((int)direction - 1) * 90, 0));
+    }
+
+    public void changeDirection(bool isClockwise) {
+        if (isClockwise) {
+            gameObject.transform.Rotate(Vector3.up, 90);
+        }
+        else {
+            gameObject.transform.Rotate(Vector3.up, -90);
+        }
+    }
 }

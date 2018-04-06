@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using FairyGUI;
+using System;
 
 public class MainUI : Window{
     GList list;
+    GButton rButton;
 
     private Slot[] slotList = new Slot[10];
 
@@ -24,11 +26,32 @@ public class MainUI : Window{
 
     protected override void OnInit() {
         contentPane = UIPackage.CreateObject("MainUI", "Hud").asCom;
+
         list = contentPane.GetChildAt(1).asList;
         list.itemRenderer = ItemRenderer;
         list.numItems = slotList.Length;
 
+        rButton= contentPane.GetChildAt(2).asButton;
+        rButton.onClick.Add(onClickRotation);
+
         Globals.input.addOnClickFloor(handlerClickFloor);
+        Globals.input.addOnClickEntity(handlerClickEntity);
+        Globals.input.addOnDoubleClickEntity(handlerDoubleClickEntity);
+    }
+
+    private void handlerDoubleClickEntity(EntityBase entity) {
+        //GRoot.inst.ShowWindow(new ArchPanel());
+    }
+
+    private void onClickRotation(EventContext context) {
+        if (Globals.input.currentSelectedEntity) {
+            Globals.input.currentSelectedEntity.changeDirection(true);
+            handlerClickEntity(Globals.input.currentSelectedEntity);
+        }
+    }
+
+    private void handlerClickEntity(EntityBase entity) {
+        rButton.GetController("c1").SetSelectedIndex((int)entity.direction - 1);
     }
 
     void  handlerClickFloor(Vector3 point) {
