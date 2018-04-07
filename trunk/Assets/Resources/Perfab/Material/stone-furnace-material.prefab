@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4091165791491368}
   - component: {fileID: 33666476703363236}
-  - component: {fileID: 64068279227470662}
   - component: {fileID: 23576192950536830}
   - component: {fileID: 54577472585761082}
-  m_Layer: 0
+  - component: {fileID: 65176827744527954}
+  m_Layer: 9
   m_Name: stone-furnace-material
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1626332487353158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.036, y: 0.672, z: 10.498}
+  m_LocalPosition: {x: -23.31, y: 17.086775, z: 7.67}
   m_LocalScale: {x: 0.04, y: 1, z: 0.04}
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,17 +99,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &64068279227470662
-MeshCollider:
+--- !u!65 &65176827744527954
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1626332487353158}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: -1
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.05, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}

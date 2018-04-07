@@ -24,10 +24,11 @@ GameObject:
   - component: {fileID: 23400807934973912}
   - component: {fileID: 95185492132590410}
   - component: {fileID: 114152529943257074}
-  m_Layer: 0
+  - component: {fileID: 54453342669236924}
+  m_Layer: 8
   m_Name: burner-inserter
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -41,7 +42,7 @@ GameObject:
   - component: {fileID: 4232639788422860}
   - component: {fileID: 65526117543465614}
   - component: {fileID: 114117307091775916}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: cargo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +59,7 @@ GameObject:
   - component: {fileID: 4088803645785674}
   - component: {fileID: 65798223602516090}
   - component: {fileID: 114395380053150398}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +103,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1535080382458444}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5627615, y: -5.913151, z: 3.3149939}
+  m_LocalPosition: {x: -25.05, y: 18.385931, z: 12.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4905275457964240}
@@ -219,6 +220,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1788859982584394}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54453342669236924
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1535080382458444}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &65266354044370596
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -238,7 +254,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1735679488101562}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -250,7 +266,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1753160483057664}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}

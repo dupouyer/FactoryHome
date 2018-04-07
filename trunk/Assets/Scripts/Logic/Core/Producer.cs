@@ -58,7 +58,7 @@ public class Producer : EntityBase {
         outSlot.instantiateEntity(false, transform.position);
     }
 
-    public void pushEntity(GameObject gameObject) {
+    public bool pushEntity(GameObject gameObject) {
         Entity entity = Globals.entityManager.getEntityByGameObject(gameObject);
 
         for (int i = 0; i < inSlots.Length; i++) {
@@ -66,8 +66,10 @@ public class Producer : EntityBase {
                 inSlots[i].pushEntity(gameObject);
                 // 有新的材料进入，重设一下工作状态
                 resetWorkingState();
-                break;
+                return true;
             }
         }
+
+        return false;
     }
 }

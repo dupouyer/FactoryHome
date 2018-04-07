@@ -46,7 +46,10 @@ public class Arm : EntityBase {
 
                 if (target.hit.Count > 0) {
                     Producer p = target.hit[0].GetComponent<Producer>();
-                    p.pushEntity(cargo);
+                    // 放置失败
+                    if (!p.pushEntity(cargo)) {
+                        cargo.GetComponent<Collider>().enabled = true;
+                    }
                 }
                 else {
                     cargo.GetComponent<Collider>().enabled = true;

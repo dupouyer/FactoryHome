@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4172152941179510}
   - component: {fileID: 33724354389065624}
-  - component: {fileID: 64893926764817232}
   - component: {fileID: 23271806227509986}
   - component: {fileID: 54092130777286088}
-  m_Layer: 0
+  - component: {fileID: 65803679848963990}
+  m_Layer: 9
   m_Name: copper-material
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1547986161893874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 0, z: -1.87}
+  m_LocalPosition: {x: -21.85, y: 18.664608, z: 11.417564}
   m_LocalScale: {x: 0.04, y: 1, z: 0.04}
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,17 +99,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &64893926764817232
-MeshCollider:
+--- !u!65 &65803679848963990
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1547986161893874}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: -1
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.05, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}

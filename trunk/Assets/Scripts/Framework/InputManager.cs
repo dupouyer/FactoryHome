@@ -30,7 +30,7 @@ public class InputManager:MonoBehaviour{
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit)) {
+            if (Physics.Raycast(ray, out hit, 30, 1 << 8)) {
                 EntityBase hitEntity = hit.collider.gameObject.GetComponent<EntityBase>();
                 if (hitEntity) {
                     bool isDouble = currentSelectedEntity == hitEntity;

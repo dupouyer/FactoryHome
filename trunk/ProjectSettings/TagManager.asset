@@ -14,10 +14,10 @@ TagManager:
   - 
   - 
   - Entity
-  - Ore
-  - 
-  - 
-  - 
+  - Material
+  - HitBox
+  - EntityHitBox
+  - MaterialHitBox
   - 
   - 
   - 

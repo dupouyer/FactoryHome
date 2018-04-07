@@ -23,10 +23,10 @@ GameObject:
   - component: {fileID: 65480323218327464}
   - component: {fileID: 23117974626320530}
   - component: {fileID: 114320730243481240}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: transport-belt
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1595378189528020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.48818, y: 2.9844198, z: 22.826765}
+  m_LocalPosition: {x: -24.99, y: 17.52, z: 6.1424875}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -94,8 +94,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 14.020257, z: 1}
-  m_Center: {x: 0, y: 6.510129, z: 0}
+  m_Size: {x: 0.9, y: 10, z: 0.9}
+  m_Center: {x: 0, y: 5, z: 0}
 --- !u!114 &114320730243481240
 MonoBehaviour:
   m_ObjectHideFlags: 1
