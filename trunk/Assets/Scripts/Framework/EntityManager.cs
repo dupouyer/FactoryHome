@@ -62,9 +62,10 @@ public class EntityManager {
 
     Dictionary<int, Entity> entityInstMap = new Dictionary<int, Entity>();
 
-    public GameObject instantiateEntity(Entity entity, bool isArch, Vector3 pos) {
+    public GameObject instantiateEntity(Entity entity, bool isArch, Vector3 pos, bool colliderEnable) {
         // 实例化显示对象
         GameObject gobj = Object.Instantiate(isArch && entity.config.archPrefab ? entity.config.archPrefab : entity.config.meterialPrefab);
+        gobj.GetComponent<Collider>().enabled = colliderEnable;
         pos.y += entity.config.offsetY;
         gobj.transform.position = pos;
         entityInstMap.Add(gobj.GetInstanceID(), entity);

@@ -47,14 +47,14 @@ public class Slot {
         toSlot.entity = entity;
     }
 
-    public GameObject instantiateEntity(bool isArch, Vector3 pos) {
+    public GameObject instantiateEntity(bool isArch, Vector3 pos, bool colliderEnable = true) {
         if (!checkAvailable()) {
             Debug.LogError("can't instantiateEntity from a empty slot");
             return null;
         }
 
         num -= 1;
-        return Globals.entityManager.instantiateEntity(entity, isArch, pos);
+        return Globals.entityManager.instantiateEntity(entity, isArch, pos, colliderEnable);
     }
 
     public bool checkAvailable() {

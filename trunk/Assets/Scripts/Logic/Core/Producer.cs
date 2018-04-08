@@ -58,7 +58,7 @@ public class Producer : EntityBase {
         outSlot.instantiateEntity(false, transform.position);
     }
 
-    public bool pushEntity(GameObject gameObject) {
+    override public bool pushEntity(GameObject gameObject) {
         Entity entity = Globals.entityManager.getEntityByGameObject(gameObject);
 
         for (int i = 0; i < inSlots.Length; i++) {

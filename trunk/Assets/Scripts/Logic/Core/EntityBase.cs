@@ -40,4 +40,8 @@ public class EntityBase : MonoBehaviour {
             gameObject.transform.Rotate(Vector3.up, -90);
         }
     }
+
+    virtual public bool pushEntity(GameObject gameobject) {
+        return false;
+    }
 }

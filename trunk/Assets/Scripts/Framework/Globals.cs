@@ -7,4 +7,6 @@ public class Globals {
     public static PanelManager panelManager = new PanelManager();
     public static ConfigManager configManager = new ConfigManager();
     public static InputManager input;
+
+    public static int LAYER_ENTITY = 8;
 }

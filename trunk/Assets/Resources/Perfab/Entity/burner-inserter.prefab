@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 4232639788422860}
   - component: {fileID: 65526117543465614}
   - component: {fileID: 114117307091775916}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: cargo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 4088803645785674}
   - component: {fileID: 65798223602516090}
   - component: {fileID: 114395380053150398}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea8508cbc8a6a574a97cfdeec95c33ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hit: []
+  hits: []
+  entities: []
 --- !u!114 &114152529943257074
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -325,4 +326,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea8508cbc8a6a574a97cfdeec95c33ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hit: []
+  hits: []
+  entities: []

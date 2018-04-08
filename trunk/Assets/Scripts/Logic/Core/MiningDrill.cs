@@ -30,6 +30,6 @@ public class MiningDrill : EntityBase {
 
     void produce() {
         Globals.entityManager.CreateToSlot(ore.id, 1, outSlot);
-        outSlot.instantiateEntity(false, transform.position + Vector3.forward);
+        //outSlot.instantiateEntity(false, transform.position + Vector3.forward);
     }
 }

@@ -29,30 +29,42 @@ public class Arm : EntityBase {
 
     // Update is called once per frame
     void Update() {
-        if (animator.GetCurrentAnimatorStateInfo(0).shortNameHash == IDLE_HASH && cargoBuffer.hit.Count > 0 && !isWorking) {
-            GameObject cargo = cargoBuffer.hit[0];
-            cargoBuffer.hit.Remove(cargo);
+        // 拿取货物
+        if (animator.GetCurrentAnimatorStateInfo(0).shortNameHash == IDLE_HASH && cargoBuffer.length > 0 && !isWorking) {
+            GameObject cargo;
+            if (cargoBuffer.hits.Count > 0) {
+                cargo = cargoBuffer.hits[0];
+                cargoBuffer.hits.Remove(cargo);
+            }
+            else {
+                EntityBase box = cargoBuffer.entities[0];
+                cargo = box.outSlot.instantiateEntity(false, box.gameObject.transform.position, false);
+            }
+
             cargo.GetComponent<Collider>().enabled = false;
             // 货物绑定在手指上
             cargo.transform.SetParent(fingerPoint);
             isWorking = true;
         }
+        // 放置货物
         else if (animator.GetCurrentAnimatorStateInfo(0).shortNameHash == RUN_HASH && isWorking ) {
             if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1.0f) {
-                isWorking = false;
                 GameObject cargo = fingerPoint.GetChild(0).gameObject;
-                // 从手指上移除
-                cargo.transform.SetParent(null);
 
-                if (target.hit.Count > 0) {
-                    Producer p = target.hit[0].GetComponent<Producer>();
-                    // 放置失败
-                    if (!p.pushEntity(cargo)) {
-                        cargo.GetComponent<Collider>().enabled = true;
+                // 目标位置有实体，尝试放入实体中
+                if (target.entities.Count > 0) {
+                    if (target.entities[0].pushEntity(cargo)) {
+                        isWorking = false;
+                    }
+                    else {
+                        // 在下一帧继续尝试
                     }
                 }
                 else {
                     cargo.GetComponent<Collider>().enabled = true;
+                    // 从手指上移除
+                    cargo.transform.SetParent(null);
+                    isWorking = false;
                 }
             }
         }

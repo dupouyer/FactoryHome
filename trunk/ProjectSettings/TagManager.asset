@@ -16,8 +16,8 @@ TagManager:
   - Entity
   - Material
   - HitBox
-  - EntityHitBox
-  - MaterialHitBox
+  - 
+  - 
   - 
   - 
   - 
