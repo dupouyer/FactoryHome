@@ -11,9 +11,9 @@ public class HitBox: MonoBehaviour {
     public int length {
         get {
             int num = 0;
-            foreach (EntityBase e in entities) {
+            entities.ForEach(e => {
                 num += e.outSlot.num;
-            }
+            });
             return num + hits.Count;
         }
     }
@@ -25,21 +25,21 @@ public class HitBox: MonoBehaviour {
 	}
 
     private void OnTriggerEnter(Collider other) {
-        EntityBase entity = other.gameObject.GetComponent<EntityBase>();
-        if (entity) {
+        if (other.gameObject.layer == Globals.LAYER_ENTITY) {
+            EntityBase entity = other.gameObject.GetComponent<EntityBase>();
             entities.Add(entity);
         }
-        else {
+        else if(other.gameObject.layer == Globals.LAYER_MATERIAL){
             hits.Add(other.gameObject);
         }
     }
 
     private void OnTriggerExit(Collider other) {
-        EntityBase entity = other.gameObject.GetComponent<EntityBase>();
-        if (entity) {
-            entities.Add(entity);
+        if (other.gameObject.layer == Globals.LAYER_ENTITY) {
+            EntityBase entity = other.gameObject.GetComponent<EntityBase>();
+            entities.Remove(entity);
         }
-        else {
+        else if(other.gameObject.layer == Globals.LAYER_MATERIAL){
             hits.Remove(other.gameObject);
         }
     }

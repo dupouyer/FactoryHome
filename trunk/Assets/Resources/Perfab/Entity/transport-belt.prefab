@@ -23,12 +23,12 @@ GameObject:
   - component: {fileID: 65480323218327464}
   - component: {fileID: 23117974626320530}
   - component: {fileID: 114320730243481240}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: transport-belt
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4012336271378226
 Transform:

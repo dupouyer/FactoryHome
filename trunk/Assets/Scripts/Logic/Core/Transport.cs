@@ -15,11 +15,11 @@ public class Transport : EntityBase {
 	}
 
     private void OnTriggerStay(Collider other) {
-        Debug.Log("onTrigger");
-        other.transform.Translate(transform.forward * workSpeed * Time.deltaTime);
+        if (other.gameObject.layer == Globals.LAYER_MATERIAL) {
+            other.transform.Translate(transform.forward * workSpeed * Time.deltaTime);
+        }
     }
 
     private void OnCollisionStay(Collision collision) {
-        Debug.Log("onCollision");
     }
 }
