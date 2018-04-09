@@ -9,8 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0e3acb575731d449a0c1752898e6241, type: 3}
-  m_Name: iron-plate
+  m_Name: copper-ore
   m_EditorClassIdentifier: 
+  type: 1
+  showName: "\u94DC\u77FF"
+  panel: 
   archPrefab: {fileID: 0}
-  meterialPrefab: {fileID: 0}
+  meterialPrefab: {fileID: 1547986161893874, guid: 8b9f7165964a3bf4baeb6ec06ff11c8c,
+    type: 2}
   offsetY: 0.3

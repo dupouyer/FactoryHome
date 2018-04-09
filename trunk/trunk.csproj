@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.3.1f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -449,10 +451,13 @@
     <Compile Include="Assets\Scripts\Logic\Core\Producer.cs" />
     <Compile Include="Assets\Scripts\Logic\Core\Transport.cs" />
     <Compile Include="Assets\Scripts\Logic\UI\ArchPanel.cs" />
+    <Compile Include="Assets\Scripts\Logic\UI\BaseArchPanel.cs" />
     <Compile Include="Assets\Scripts\Logic\UI\ExtensionGUI\SlotItem.cs" />
     <Compile Include="Assets\Scripts\Logic\UI\MainUI.cs" />
+    <Compile Include="Assets\Scripts\Logic\UI\MiningDrillPanel.cs" />
     <Compile Include="Assets\Scripts\UI\Common\CommonBinder.cs" />
     <Compile Include="Assets\Scripts\UI\Common\UI_Button.cs" />
+    <Compile Include="Assets\Scripts\UI\Common\UI_CloseButton.cs" />
     <Compile Include="Assets\Scripts\UI\Common\UI_ObjItem.cs" />
   </ItemGroup>
   <ItemGroup>

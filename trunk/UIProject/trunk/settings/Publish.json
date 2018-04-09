@@ -3,7 +3,7 @@
 		"classNamePrefix":"UI_",
 		"codePath":"D:\\Work\\Project\\Unity\\FactoryHome\\trunk\\Assets\\Scripts\\UI",
 		"codeType":"",
-		"getMemberByName":false,
+		"getMemberByName":true,
 		"ignoreNoname":false,
 		"memberNamePrefix":"m_",
 		"packageName":""

@@ -26,9 +26,9 @@ namespace Common
 		{
 			base.ConstructFromXML(xml);
 
-			m_bg = (GImage)this.GetChildAt(0);
-			m_icon = (GLoader)this.GetChildAt(1);
-			m_num = (GTextField)this.GetChildAt(2);
+			m_bg = (GImage)this.GetChild("bg");
+			m_icon = (GLoader)this.GetChild("icon");
+			m_num = (GTextField)this.GetChild("num");
 		}
 	}
 }

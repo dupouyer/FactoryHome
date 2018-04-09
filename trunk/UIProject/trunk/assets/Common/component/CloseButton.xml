@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="60,60" extention="Button">
+  <displayList>
+    <image id="n0_qp14" name="n0" src="oxxbdc" xy="0,0" size="60,60" aspect="true"/>
+  </displayList>
+  <Button downEffect="dark" downEffectValue="0.80"/>
+</component>

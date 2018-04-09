@@ -9,8 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0e3acb575731d449a0c1752898e6241, type: 3}
-  m_Name: burner-mining-drill
+  m_Name: burner-inserter
   m_EditorClassIdentifier: 
-  archPrefab: {fileID: 1973020326787332, guid: 9843affe1fac2734080609a8584bfb77, type: 2}
-  meterialPrefab: {fileID: 0}
+  type: 6
+  showName: "\u70ED\u80FD\u673A\u68B0\u81C2"
+  panel: Arch
+  archPrefab: {fileID: 1535080382458444, guid: 637f49b87b50c414e8f9b9d175a915b4, type: 2}
+  meterialPrefab: {fileID: 1166765496491878, guid: 8e4746dbc7b7f674d9fbbbab655d85e1,
+    type: 2}
   offsetY: 0.5

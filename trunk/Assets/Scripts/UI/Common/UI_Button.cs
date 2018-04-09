@@ -26,9 +26,9 @@ namespace Common
 		{
 			base.ConstructFromXML(xml);
 
-			m_button = this.GetControllerAt(0);
-			m_n1 = (GImage)this.GetChildAt(0);
-			m_title = (GTextField)this.GetChildAt(1);
+			m_button = this.GetController("button");
+			m_n1 = (GImage)this.GetChild("n1");
+			m_title = (GTextField)this.GetChild("title");
 		}
 	}
 }

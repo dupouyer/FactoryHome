@@ -11,6 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e3acb575731d449a0c1752898e6241, type: 3}
   m_Name: copper-plate
   m_EditorClassIdentifier: 
+  type: 2
+  showName: "\u94DC\u677F"
+  panel: 
   archPrefab: {fileID: 0}
   meterialPrefab: {fileID: 1020393411439010, guid: d12359c284d615444917c408a2c6eca1,
     type: 2}

@@ -52,7 +52,7 @@ public class EntityManager {
         Entity entity;
 
         if (!entityList.TryGetValue(id, out entity)) {
-            EntityConfig config = Globals.configManager.getConfig<EntityConfig>(id);
+            EntityConfig config = Globals.configManager.getConfig<EntityConfig>("Entity/" + id);
             entity = new Entity(config);
             entityList.Add(id, entity);
         }

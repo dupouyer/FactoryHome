@@ -11,6 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e3acb575731d449a0c1752898e6241, type: 3}
   m_Name: iron-ore
   m_EditorClassIdentifier: 
+  type: 1
+  showName: "\u94C1\u77FF"
+  panel: 
   archPrefab: {fileID: 0}
   meterialPrefab: {fileID: 1245522341288038, guid: 8a2811aebb3f82146b61fba647f0589a,
     type: 2}

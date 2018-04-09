@@ -9,9 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0e3acb575731d449a0c1752898e6241, type: 3}
-  m_Name: transport-belt
+  m_Name: iron-plate
   m_EditorClassIdentifier: 
-  id: transport-belt
-  archPrefab: {fileID: 1595378189528020, guid: b43a1fab42206c74b9da650009d80ff1, type: 2}
-  meterialPrefab: {fileID: 1386015125986796, guid: d9cb210431e6e25499eaf3ae105b648f,
-    type: 2}
+  type: 2
+  showName: "\u94C1\u677F"
+  panel: 
+  archPrefab: {fileID: 0}
+  meterialPrefab: {fileID: 0}
+  offsetY: 0.3

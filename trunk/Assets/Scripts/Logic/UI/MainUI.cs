@@ -70,7 +70,20 @@ public class MainUI : Window{
     }
 
     private void handlerDoubleClickEntity(EntityBase entity) {
-        //GRoot.inst.ShowWindow(new ArchPanel());
+        BaseArchPanel panel = null;
+        Entity e = Globals.entityManager.getEntityByGameObject(entity.gameObject);
+        switch (e.config.panel) {
+            case "Arch":
+                panel = new ArchPanel();
+                break;
+            case "MiningDrillPanel":
+                panel = new MiningDrillPanel();
+                break;
+        }
+        if (panel != null) {
+            panel.Show();
+            panel.setEntity(entity, e);
+        }
     }
 
     private void onClickRotation(EventContext context) {
@@ -92,6 +105,6 @@ public class MainUI : Window{
     }
 
     void ItemRenderer(int index, GObject item) {
-        ((SlotItem)item).SetObjData(slotList[index]);
+        ((SlotItem)item).setSlot(slotList[index]);
     }
 }
