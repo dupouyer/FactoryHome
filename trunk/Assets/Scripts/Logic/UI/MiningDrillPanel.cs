@@ -41,7 +41,7 @@ public class MiningDrillPanel : BaseArchPanel {
         outSlot.setSlot(entityBase.outSlot);
         contentPane.GetController("c1").SetSelectedIndex(entityBase.outSlot.entity == null ? 1 : 0);
 
-        oreList = Globals.configManager.getEntityConfigs(EntityConfig.TYPE.ore);
+        oreList = Globals.configManager.getEntityConfigs(EntityConfig.TYPE.ore, EntityConfig.TYPE.fuel);
         targetList.numItems = oreList.Length;
     }
 }

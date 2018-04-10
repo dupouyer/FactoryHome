@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 7
   showName: "\u77F3\u7089"
-  panel: Arch
+  panel: FurnacePanel
   archPrefab: {fileID: 1243426568000310, guid: d5dbc1c6f048d6b45b137e9feb2ba2fc, type: 2}
   meterialPrefab: {fileID: 1626332487353158, guid: 9d9a736d10443ff468295699b05092ea,
     type: 2}

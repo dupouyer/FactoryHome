@@ -79,6 +79,9 @@ public class MainUI : Window{
             case "MiningDrillPanel":
                 panel = new MiningDrillPanel();
                 break;
+            case "FurnacePanel":
+                panel = new FurnacePanel();
+                break;
         }
         if (panel != null) {
             panel.Show();

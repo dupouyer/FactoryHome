@@ -11,4 +11,13 @@ public class BlueprintConfig :ScriptableObject{
     public int outNum = 1;
     // 生产需要的时间
     public int time;
+
+    public int getSlotIndex(Entity entity) {
+        for (int i = 0; i < inEntities.Length; i++) {
+            if (inEntities[i].id == entity.id) {
+                return i;
+            }
+        }
+        return -1;
+    }
 }

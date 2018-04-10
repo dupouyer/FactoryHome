@@ -13,6 +13,7 @@ public class Slot {
             return;
         }
         Object.Destroy(gameObject);
+        this.entity = entity;
         num += 1;
     }
 
@@ -63,5 +64,12 @@ public class Slot {
 
     public bool checkAvailable(string id, int num) {
         return checkAvailable() && entity.id == id && this.num >= num;
+    }
+
+    public void clear() {
+        if (checkAvailable()) {
+            entity = null;
+            num = 0;
+        }
     }
 }

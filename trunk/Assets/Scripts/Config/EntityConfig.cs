@@ -10,6 +10,7 @@ public class EntityConfig : ScriptableObject {
         }
     }
     public enum TYPE {
+        fuel = 0, // 燃料
         ore = 1, //矿石
         plate = 2, // 金属板材
         material = 3, // 原材料

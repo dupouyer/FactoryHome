@@ -3,6 +3,7 @@
   <resources>
     <component id="ugok0" name="Panel.xml" path="/" exported="true"/>
     <component id="qp141" name="MiningDrillPanel.xml" path="/" exported="true"/>
+    <component id="ptl32" name="FurnacePanel.xml" path="/" exported="true"/>
   </resources>
   <publish name="BuildPanel"/>
 </packageDescription>

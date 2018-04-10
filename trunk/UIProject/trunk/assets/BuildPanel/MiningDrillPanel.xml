@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="400,400">
-  <controller name="c1" exported="true" pages="0,,1," selected="1"/>
+<component size="443,375">
+  <controller name="c1" exported="true" pages="0,,1," selected="0"/>
   <displayList>
-    <image id="n0_qp14" name="n0" src="oxxbcj" pkg="qqw7du1h" xy="0,0" size="443,396">
+    <image id="n0_qp14" name="n0" src="oxxbcj" pkg="qqw7du1h" xy="0,0" size="443,304">
       <gearSize controller="c1" pages="0,1" values="443,304,1,1|443,396,1,1"/>
     </image>
     <image id="n1_qp14" name="n1" src="oxxbci" pkg="qqw7du1h" xy="7,88" size="426,186"/>
