@@ -3,18 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HitBox: MonoBehaviour {
-    // 碰撞物(不带有实体组件的 Gameobject 都是原材料）
-    public List<GameObject> hits = new List<GameObject>();
-    // 实体和碰撞物要区分对待
-    public List<EntityBase> entities = new List<EntityBase>();
+    // 材料
+    public List<GameObject> materials = new List<GameObject>();
+    // 传送带
+    public Transport transport;
+    // 实体
+    public EntityBase entity;
+
+    public delegate void onTriggerEnterDelegate(Collider other);
+    public delegate void onTriggerExitDelegate(Collider other);
+    public delegate void onTrigerEntityDelegate(EntityBase entity);
+    public delegate void onTrigerTransportDelegate(Transport transport);
+
+    public event onTriggerEnterDelegate onTriggerEnter;
+    public event onTriggerExitDelegate onTriggerExit;
+    public event onTrigerEntityDelegate onTriggerEntity;
+    public event onTrigerTransportDelegate onTriggerTransport;
 
     public int length {
         get {
             int num = 0;
-            entities.ForEach(e => {
-                num += e.outSlot.num;
-            });
-            return num + hits.Count;
+            if (entity) {
+                num += entity.outSlot.num;
+            }
+            return num + materials.Count;
         }
     }
 
@@ -26,21 +38,45 @@ public class HitBox: MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.layer == Globals.LAYER_ENTITY) {
-            EntityBase entity = other.gameObject.GetComponent<EntityBase>();
-            entities.Add(entity);
+            entity = other.gameObject.GetComponent<EntityBase>();
+            if (onTriggerEntity != null) {
+                onTriggerEntity(entity);
+            }
         }
         else if(other.gameObject.layer == Globals.LAYER_MATERIAL){
-            hits.Add(other.gameObject);
+            materials.Add(other.gameObject);
+        }
+        else if(other.gameObject.layer == Globals.LAYER_TRANSPORT){
+            transport = other.gameObject.GetComponent<Transport>();
+            if (onTriggerTransport != null) {
+                onTriggerTransport(transport);
+            }
+        }
+
+        if (onTriggerEnter != null) {
+            onTriggerEnter(other);
         }
     }
 
     private void OnTriggerExit(Collider other) {
         if (other.gameObject.layer == Globals.LAYER_ENTITY) {
-            EntityBase entity = other.gameObject.GetComponent<EntityBase>();
-            entities.Remove(entity);
+            entity = null;
+            if (onTriggerEntity != null) {
+                onTriggerEntity(other.GetComponent<EntityBase>());
+            }
         }
         else if(other.gameObject.layer == Globals.LAYER_MATERIAL){
-            hits.Remove(other.gameObject);
+            materials.Remove(other.gameObject);
+        }
+        else if(other.gameObject.layer == Globals.LAYER_TRANSPORT){
+            transport = null;
+            if (onTriggerTransport != null) {
+                onTriggerTransport(other.GetComponent<Transport>());
+            }
+        }
+
+        if (onTriggerExit != null) {
+            onTriggerExit(other);
         }
     }
 }

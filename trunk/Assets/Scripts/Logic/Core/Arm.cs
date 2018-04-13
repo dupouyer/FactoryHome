@@ -32,12 +32,12 @@ public class Arm : EntityBase {
         // 拿取货物
         if (animator.GetCurrentAnimatorStateInfo(0).shortNameHash == IDLE_HASH && cargoBuffer.length > 0 && !isWorking) {
             GameObject cargo;
-            if (cargoBuffer.hits.Count > 0) {
-                cargo = cargoBuffer.hits[0];
-                cargoBuffer.hits.Remove(cargo);
+            if (cargoBuffer.materials.Count > 0) {
+                cargo = cargoBuffer.materials[0];
+                cargoBuffer.materials.Remove(cargo);
             }
             else {
-                EntityBase box = cargoBuffer.entities[0];
+                EntityBase box = cargoBuffer.entity;
                 cargo = box.outSlot.instantiateEntity(false, box.gameObject.transform.position, false);
             }
 
@@ -52,8 +52,8 @@ public class Arm : EntityBase {
                 GameObject cargo = fingerPoint.GetChild(0).gameObject;
 
                 // 目标位置有实体，尝试放入实体中
-                if (target.entities.Count > 0) {
-                    if (target.entities[0].pushEntity(cargo)) {
+                if (target.entity) {
+                    if (target.entity.pushEntity(cargo)) {
                         isWorking = false;
                     }
                     else {

@@ -22,6 +22,9 @@ public class EntityBase : MonoBehaviour {
     // 工作中
     public bool isWorking;
 
+    public float zLength = 1f;
+    public float xLength = 1f;
+
     public DIRECTION direction {
         get {
             return (DIRECTION)Mathf.Ceil(gameObject.transform.rotation.eulerAngles.y / 90 + 1f);
