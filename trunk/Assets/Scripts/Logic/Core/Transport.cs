@@ -137,6 +137,11 @@ public class Transport : EntityBase {
             else {
                 schedule[uindex] = (endWorkingTime + 1 - normalizeZ) * clipLength;
             }
+
+            if (cargo is Materail) {
+                (cargo as Materail).transport = this;
+            }
+
             cargoNum ++;
             updateCargoPosition();
             return true;
@@ -150,8 +155,25 @@ public class Transport : EntityBase {
         if (prev.transport) {
             prev.transport.pushCargo(pos[uindex], pos[uindex].transform.position);
         }
+        else {
+            if (pos[uindex]is Materail) {
+                (pos[uindex] as Materail).transport = null;
+            }
+        }
         pos[uindex] = null;
         cargoNum--;
+    }
+
+    public void drawCargo(EntityBase cargo) {
+        for (int i = 0; i < pos.Length; i++) {
+            if (pos[i] == cargo) {
+                if (pos[i]is Materail) {
+                    (pos[i] as Materail).transport = null;
+                }
+                pos[i] = null;
+                cargoNum--;
+            }
+        }
     }
 
     private void handlerNextTransport(Transport transport) {

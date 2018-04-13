@@ -43,5 +43,6 @@ public class MiningDrill : EntityBase {
         Vector3 offset = Vector3.right * Random.Range(-0.25f, 0.25f);
         Vector3 p = outHitBox.transform.TransformPoint(offset);
         outTransport.pushCargo(oreEntity, p);
+        oreEntity.gameObject.GetComponent<Collider>().enabled = true;
     }
 }

@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.3.1f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -446,6 +448,7 @@
     <Compile Include="Assets\Scripts\Logic\Core\EntityBase.cs" />
     <Compile Include="Assets\Scripts\Logic\Core\Furnace.cs" />
     <Compile Include="Assets\Scripts\Logic\Core\HitBox.cs" />
+    <Compile Include="Assets\Scripts\Logic\Core\Materail.cs" />
     <Compile Include="Assets\Scripts\Logic\Core\MiningDrill.cs" />
     <Compile Include="Assets\Scripts\Logic\Core\Transport.cs" />
     <Compile Include="Assets\Scripts\Logic\UI\ArchPanel.cs" />

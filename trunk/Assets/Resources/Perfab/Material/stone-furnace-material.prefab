@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23576192950536830}
   - component: {fileID: 54577472585761082}
   - component: {fileID: 65176827744527954}
+  - component: {fileID: 114051044950965162}
   m_Layer: 9
   m_Name: stone-furnace-material
   m_TagString: Untagged
@@ -106,8 +107,25 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1626332487353158}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10, y: 0.05, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114051044950965162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1626332487353158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fea9c25c635560f4b8ed83dbc3f852d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  workSpeed: 1
+  workingTime: 0
+  isWorking: 0
+  zLength: 1
+  xLength: 1
+  transport: {fileID: 0}

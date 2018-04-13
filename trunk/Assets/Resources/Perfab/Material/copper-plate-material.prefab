@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23545566155152030}
   - component: {fileID: 54408567573499676}
   - component: {fileID: 65184453671873288}
-  - component: {fileID: 114797818055831962}
+  - component: {fileID: 114396249781931426}
   m_Layer: 9
   m_Name: copper-plate-material
   m_TagString: Untagged
@@ -107,12 +107,12 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1020393411439010}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10, y: 0.05, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114797818055831962
+--- !u!114 &114396249781931426
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -120,11 +120,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1020393411439010}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8cf975d60e0eec4986941dd4d3ea98b, type: 3}
+  m_Script: {fileID: 11500000, guid: fea9c25c635560f4b8ed83dbc3f852d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   workSpeed: 1
   workingTime: 0
   isWorking: 0
-  zLength: 0.2
-  xLength: 0.2
+  zLength: 1
+  xLength: 1
+  transport: {fileID: 0}

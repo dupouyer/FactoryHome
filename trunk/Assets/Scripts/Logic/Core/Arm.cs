@@ -35,6 +35,10 @@ public class Arm : EntityBase {
             if (cargoBuffer.materials.Count > 0) {
                 cargo = cargoBuffer.materials[0];
                 cargoBuffer.materials.Remove(cargo);
+                EntityBase e = cargo.GetComponent<EntityBase>();
+                if (e is Materail && (e as Materail).transport) {
+                    (e as Materail).transport.drawCargo(e);
+                }
             }
             else {
                 EntityBase box = cargoBuffer.entity;
@@ -44,6 +48,7 @@ public class Arm : EntityBase {
             cargo.GetComponent<Collider>().enabled = false;
             // 货物绑定在手指上
             cargo.transform.SetParent(fingerPoint);
+            cargo.transform.localPosition = Vector3.zero;
             isWorking = true;
         }
         // 放置货物
