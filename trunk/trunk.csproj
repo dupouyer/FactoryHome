@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.3.1f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -299,6 +297,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\External\CustomIK\Scripts\CustomIK.cs" />
     <Compile Include="Assets\External\DOTween\Examples\Basics.cs" />
     <Compile Include="Assets\External\DOTween\Examples\Sequences.cs" />
     <Compile Include="Assets\External\FairyGUI\Scripts\Core\BlendMode.cs" />
@@ -471,6 +470,7 @@
     <None Include="Assets\External\FairyGUI\Resources\Shaders\FairyGUI-Image.shader" />
     <None Include="Assets\External\FairyGUI\Resources\Shaders\FairyGUI-Text-Brighter.shader" />
     <None Include="Assets\External\FairyGUI\Resources\Shaders\FairyGUI-Text.shader" />
+    <None Include="Assets\Resources\Shader\UVAnim.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

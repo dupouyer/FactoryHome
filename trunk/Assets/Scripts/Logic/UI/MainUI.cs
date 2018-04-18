@@ -23,9 +23,9 @@ public class MainUI : Window{
 
         Globals.entityManager.CreateToSlot("coal", 10, slotList[0]);
         Globals.entityManager.CreateToSlot("copper-ore", 10, slotList[1]);
-        Globals.entityManager.CreateToSlot("burner-inserter", 10, slotList[2]);
-        Globals.entityManager.CreateToSlot("stone-furnace", 10, slotList[3]);
-        Globals.entityManager.CreateToSlot("transport-belt", 10, slotList[4]);
+        Globals.entityManager.CreateToSlot("burner-inserter", 100, slotList[2]);
+        Globals.entityManager.CreateToSlot("stone-furnace", 100, slotList[3]);
+        Globals.entityManager.CreateToSlot("transport-belt", 100, slotList[4]);
         Globals.entityManager.CreateToSlot("burner-mining-drill", 10, slotList[5]);
     }
 

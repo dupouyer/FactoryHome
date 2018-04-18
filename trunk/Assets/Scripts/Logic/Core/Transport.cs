@@ -30,7 +30,7 @@ public class Transport : EntityBase {
         platform = transform.GetChild(2);
         platformShow = transform.GetChild(3);
 
-        indexLenght = (int)(1 / step);
+        indexLenght = Mathf.FloorToInt(1 / step);
 
         pos = new EntityBase[indexLenght * 2];
         schedule = new float[indexLenght * 2];
@@ -117,10 +117,10 @@ public class Transport : EntityBase {
         bool isLeft = normalizeZ > (normalzeWorkingTime - startWorkingTime);
 
         if (isLeft) {
-            index = (int)((normalizeZ + startWorkingTime - normalzeWorkingTime) / step);
+            index = Mathf.FloorToInt((normalizeZ + startWorkingTime - normalzeWorkingTime) / step);
         }
         else {
-            index = (int)((endWorkingTime - normalzeWorkingTime + normalizeZ) / step);
+            index = Mathf.FloorToInt((endWorkingTime - normalzeWorkingTime + normalizeZ) / step);
         }
         int uindex = index * 2 + direction;
 
