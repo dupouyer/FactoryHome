@@ -9,6 +9,10 @@ public class MiningDrill : EntityBase {
     HitBox outHitBox;
     public Transport outTransport;
 
+    Animator animator;
+
+    int WORK_HASH = Animator.StringToHash("isWorking");
+
 	// Use this for initialization
 	void Start () {
         // for test
@@ -19,16 +23,22 @@ public class MiningDrill : EntityBase {
         outHitBox.onTriggerTransport += delegate(Transport transport) {
             outTransport = outHitBox.transport;
         };
+
+        animator = GetComponentInChildren<Animator>();
 	}
 
     // Update is called once per frame
     void Update () {
         if (isWorking && ore && outTransport) {
+            animator.SetBool(WORK_HASH, true);
             workingTime += Time.deltaTime;
             if (workingTime >= workSpeed) {
                 workingTime -= workSpeed;
                 produce();
             }
+        }
+        else {
+            animator.SetBool(WORK_HASH, false);
         }
 	}
 

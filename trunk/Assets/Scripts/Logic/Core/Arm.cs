@@ -54,7 +54,8 @@ public class Arm : EntityBase {
         // 放置货物
         else if (animator.GetCurrentAnimatorStateInfo(0).shortNameHash == RUN_HASH && isWorking ) {
             if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1.0f) {
-                GameObject cargo = fingerPoint.GetChild(0).gameObject;
+                // 新加入的货物是第三个 child
+                GameObject cargo = fingerPoint.GetChild(2).gameObject;
 
                 // 目标位置有实体，尝试放入实体中
                 if (target.entity) {
