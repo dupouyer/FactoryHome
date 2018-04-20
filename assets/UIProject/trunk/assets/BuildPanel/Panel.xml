@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="280,222">
+  <displayList>
+    <image id="n19_f6s9" name="n19" src="buyiik" pkg="qqw7du1h" xy="0,0" size="280,36"/>
+    <image id="n20_f6s9" name="n20" src="buyiid" pkg="qqw7du1h" xy="0,34" size="280,188"/>
+    <text id="n2_v2bx" name="name" xy="37,1" size="206,31" fontSize="24" color="#ffffff" align="center" autoSize="none" text="Title"/>
+    <component id="n17_qp14" name="close" src="qp14ic" pkg="qqw7du1h" xy="251,5"/>
+    <image id="n21_f6s9" name="n21" src="buyiih" pkg="qqw7du1h" xy="89,57" size="101,101" group="n24_f6s9"/>
+    <image id="n22_f6s9" name="n22" src="buyiig" pkg="qqw7du1h" xy="89,57" size="98,98" group="n24_f6s9"/>
+    <loader id="n23_f6s9" name="icon" xy="89,57" size="96,96" group="n24_f6s9" url="ui://8ryvqyd07zpb25" fill="scale"/>
+    <group id="n24_f6s9" name="n24" xy="89,57" size="101,101"/>
+    <component id="n25_f6s9" name="progress" src="f6s9im" pkg="qqw7du1h" xy="38,181">
+      <ProgressBar value="50" max="100"/>
+    </component>
+  </displayList>
+</component>

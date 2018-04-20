@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="h7x263vt" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="hz000" name="Hud.xml" path="/" exported="true"/>
+    <component id="hz005" name="ButtonUp.xml" path="/"/>
+    <component id="hz006" name="ButtonLeft.xml" path="/"/>
+    <component id="hz007" name="ButtnRight.xml" path="/"/>
+    <component id="hz008" name="ButtonDown.xml" path="/"/>
+    <component id="vm4r9" name="RationButton.xml" path="/"/>
+  </resources>
+  <publish name="MainUI"/>
+</packageDescription>

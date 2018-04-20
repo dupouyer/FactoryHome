@@ -460,6 +460,7 @@
     <Compile Include="Assets\Scripts\UI\Common\UI_Button.cs" />
     <Compile Include="Assets\Scripts\UI\Common\UI_CloseButton.cs" />
     <Compile Include="Assets\Scripts\UI\Common\UI_ObjItem.cs" />
+    <Compile Include="Assets\Scripts\UI\Common\UI_ProgressBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\External\DOTween\DOTween.XML" />

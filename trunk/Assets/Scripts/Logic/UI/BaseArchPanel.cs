@@ -6,7 +6,8 @@ public class BaseArchPanel : Window {
     protected EntityBase entityBase;
     protected Entity entity;
     public BaseArchPanel() {
-      AddUISource(new UIAsset("BuildPanel"));
+        AddUISource(new UIAsset("BuildPanel"));
+        modal = true;
     }
 
     public void setEntity(EntityBase entityBase, Entity entity) {

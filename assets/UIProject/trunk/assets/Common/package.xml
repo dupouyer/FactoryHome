@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="qqw7du1h" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="t37x60" name="UI_Graphic_Resource_Coins.png" path="/ResourceIcons/" exported="true"/>
+    <image id="t37x61" name="UI_Graphic_Resource_Food.png" path="/ResourceIcons/" exported="true"/>
+    <image id="t37x62" name="UI_Graphic_Resource_Gems.png" path="/ResourceIcons/" exported="true"/>
+    <image id="t37x63" name="UI_Graphic_Resource_Iron.png" path="/ResourceIcons/" exported="true"/>
+    <image id="t37x64" name="UI_Graphic_Resource_Tools.png" path="/ResourceIcons/" exported="true"/>
+    <image id="t37x65" name="UI_Graphic_Resource_Wood.png" path="/ResourceIcons/" exported="true"/>
+    <image id="oxxbc6" name="UI_Button_Standard_Green.png" path="/Images/" exported="true" scale="9grid" scale9grid="15,17,30,34"/>
+    <image id="oxxbc7" name="UI_Button_Standard_Orange.png" path="/Images/" exported="true" scale="9grid" scale9grid="15,17,30,34"/>
+    <image id="oxxbc8" name="UI_Button_Standard_Red.png" path="/Images/" exported="true" scale="9grid" scale9grid="15,17,30,34"/>
+    <image id="oxxbc9" name="UI_Button_Standard_Sky.png" path="/Images/" exported="true" scale="9grid" scale9grid="15,17,30,34"/>
+    <image id="oxxbca" name="UI_Fill_Green.png" path="/Images/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
+    <image id="oxxbcb" name="UI_Fill_Orange.png" path="/Images/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
+    <image id="oxxbcc" name="UI_Fill_Red.png" path="/Images/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
+    <image id="oxxbcd" name="UI_Fill_Sky.png" path="/Images/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
+    <image id="oxxbce" name="UI_Frame_Dark_Transparent.png" path="/Images/" exported="true" scale="9grid" scale9grid="15,15,30,30"/>
+    <image id="oxxbcf" name="UI_Frame_Dark_White.png" path="/Images/" exported="true" scale="9grid" scale9grid="15,15,30,30"/>
+    <image id="oxxbcg" name="UI_Frame_Transparent.png" path="/Images/" exported="true" scale="9grid" scale9grid="15,15,30,30"/>
+    <image id="oxxbch" name="UI_Frame_White.png" path="/Images/" exported="true" scale="9grid" scale9grid="15,15,30,30"/>
+    <image id="oxxbci" name="UI_Panel_Content.png" path="/Images/" exported="true" scale="9grid" scale9grid="20,20,40,40"/>
+    <image id="oxxbcj" name="UI_Panel_Window.png" path="/Images/" exported="true" scale="9grid" scale9grid="20,21,40,42"/>
+    <image id="oxxbck" name="UI_Tab_Active.png" path="/Images/" exported="true" scale="9grid" scale9grid="20,20,40,40"/>
+    <image id="oxxbcl" name="UI_Tab_Inactive.png" path="/Images/" exported="true" scale="9grid" scale9grid="20,20,40,40"/>
+    <image id="oxxbcm" name="UI_Icon_Aim.png" path="/Icons/" exported="true"/>
+    <image id="oxxbcn" name="UI_Icon_AlarmOff.png" path="/Icons/" exported="true"/>
+    <image id="oxxbco" name="UI_Icon_AlarmOn.png" path="/Icons/" exported="true"/>
+    <image id="oxxbcp" name="UI_Icon_Archer.png" path="/Icons/" exported="true"/>
+    <image id="oxxbcq" name="UI_Icon_ArrowDown.png" path="/Icons/" exported="true"/>
+    <image id="oxxbcr" name="UI_Icon_ArrowLeft.png" path="/Icons/" exported="true"/>
+    <image id="oxxbcs" name="UI_Icon_ArrowRight.png" path="/Icons/" exported="true"/>
+    <image id="oxxbct" name="UI_Icon_ArrowUp.png" path="/Icons/" exported="true"/>
+    <image id="oxxbcu" name="UI_Icon_Attack.png" path="/Icons/" exported="true"/>
+    <image id="oxxbcv" name="UI_Icon_Award.png" path="/Icons/" exported="true"/>
+    <image id="oxxbcw" name="UI_Icon_Bag1.png" path="/Icons/" exported="true"/>
+    <image id="oxxbcx" name="UI_Icon_Bomb.png" path="/Icons/" exported="true"/>
+    <image id="oxxbcy" name="UI_Icon_Book.png" path="/Icons/" exported="true"/>
+    <image id="oxxbcz" name="UI_Icon_Bookmark.png" path="/Icons/" exported="true"/>
+    <image id="oxxbd0" name="UI_Icon_BtnDpad.png" path="/Icons/" exported="true"/>
+    <image id="oxxbd1" name="UI_Icon_BtnDpadDirDown.png" path="/Icons/" exported="true"/>
+    <image id="oxxbd2" name="UI_Icon_BtnDpadDirLeft.png" path="/Icons/" exported="true"/>
+    <image id="oxxbd3" name="UI_Icon_BtnDpadDirRight.png" path="/Icons/" exported="true"/>
+    <image id="oxxbd4" name="UI_Icon_BtnDpadDirUp.png" path="/Icons/" exported="true"/>
+    <image id="oxxbd5" name="UI_Icon_BtnDpadHorizontal.png" path="/Icons/" exported="true"/>
+    <image id="oxxbd6" name="UI_Icon_BtnDpadVertical.png" path="/Icons/" exported="true"/>
+    <image id="oxxbd7" name="UI_Icon_BtnL1.png" path="/Icons/" exported="true"/>
+    <image id="oxxbd8" name="UI_Icon_BtnL2.png" path="/Icons/" exported="true"/>
+    <image id="oxxbd9" name="UI_Icon_BtnL3.png" path="/Icons/" exported="true"/>
+    <image id="oxxbda" name="UI_Icon_BtnPsCircle.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdb" name="UI_Icon_BtnPsCircleRound.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdc" name="UI_Icon_BtnPsCross.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdd" name="UI_Icon_BtnPsCrossRound.png" path="/Icons/" exported="true"/>
+    <image id="oxxbde" name="UI_Icon_BtnPsSquare.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdf" name="UI_Icon_BtnPsSquareRound.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdg" name="UI_Icon_BtnPsTriangle.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdh" name="UI_Icon_BtnPsTriangleRound.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdi" name="UI_Icon_BtnR1.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdj" name="UI_Icon_BtnR2.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdk" name="UI_Icon_BtnR3.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdl" name="UI_Icon_BtnXboxA.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdm" name="UI_Icon_BtnXboxARound.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdn" name="UI_Icon_BtnXboxB.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdo" name="UI_Icon_BtnXboxBRound.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdp" name="UI_Icon_BtnXboxX.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdq" name="UI_Icon_BtnXboxXRound.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdr" name="UI_Icon_BtnXboxY.png" path="/Icons/" exported="true"/>
+    <image id="oxxbds" name="UI_Icon_BtnXboxYRound.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdt" name="UI_Icon_Camera.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdu" name="UI_Icon_CardClubs.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdv" name="UI_Icon_CardDiamonds.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdw" name="UI_Icon_CardHearts.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdx" name="UI_Icon_CardSpades.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdy" name="UI_Icon_Chainlink.png" path="/Icons/" exported="true"/>
+    <image id="oxxbdz" name="UI_Icon_Chat.png" path="/Icons/" exported="true"/>
+    <image id="oxxbe0" name="UI_Icon_Checkbox.png" path="/Icons/" exported="true"/>
+    <image id="oxxbe1" name="UI_Icon_Close.png" path="/Icons/" exported="true"/>
+    <image id="oxxbe2" name="UI_Icon_Cloud.png" path="/Icons/" exported="true"/>
+    <image id="oxxbe3" name="UI_Icon_Coin.png" path="/Icons/" exported="true"/>
+    <image id="oxxbe4" name="UI_Icon_Compass.png" path="/Icons/" exported="true"/>
+    <image id="oxxbe5" name="UI_Icon_Confirm.png" path="/Icons/" exported="true"/>
+    <image id="oxxbe6" name="UI_Icon_Crown.png" path="/Icons/" exported="true"/>
+    <image id="oxxbe7" name="UI_Icon_CurrencDollar.png" path="/Icons/" exported="true"/>
+    <image id="oxxbe8" name="UI_Icon_CurrencyBitcoin.png" path="/Icons/" exported="true"/>
+    <image id="oxxbe9" name="UI_Icon_CurrencyEuro.png" path="/Icons/" exported="true"/>
+    <image id="oxxbea" name="UI_Icon_CurrencyPound.png" path="/Icons/" exported="true"/>
+    <image id="oxxbeb" name="UI_Icon_CurrencyRuble.png" path="/Icons/" exported="true"/>
+    <image id="oxxbec" name="UI_Icon_CurrencyWon.png" path="/Icons/" exported="true"/>
+    <image id="oxxbed" name="UI_Icon_CurrencyYen.png" path="/Icons/" exported="true"/>
+    <image id="oxxbee" name="UI_Icon_Curves.png" path="/Icons/" exported="true"/>
+    <image id="oxxbef" name="UI_Icon_Defend.png" path="/Icons/" exported="true"/>
+    <image id="oxxbeg" name="UI_Icon_Delete.png" path="/Icons/" exported="true"/>
+    <image id="oxxbeh" name="UI_Icon_DeviceComputer.png" path="/Icons/" exported="true"/>
+    <image id="oxxbei" name="UI_Icon_DevicePhone.png" path="/Icons/" exported="true"/>
+    <image id="oxxbej" name="UI_Icon_Edit.png" path="/Icons/" exported="true"/>
+    <image id="oxxbek" name="UI_Icon_Energy.png" path="/Icons/" exported="true"/>
+    <image id="oxxbel" name="UI_Icon_Exit.png" path="/Icons/" exported="true"/>
+    <image id="oxxbem" name="UI_Icon_FaithChristianity.png" path="/Icons/" exported="true"/>
+    <image id="oxxben" name="UI_Icon_FaithIslam.png" path="/Icons/" exported="true"/>
+    <image id="oxxbeo" name="UI_Icon_FaithJudaism.png" path="/Icons/" exported="true"/>
+    <image id="oxxbep" name="UI_Icon_FaithTaosim.png" path="/Icons/" exported="true"/>
+    <image id="oxxbeq" name="UI_Icon_FastForward.png" path="/Icons/" exported="true"/>
+    <image id="oxxber" name="UI_Icon_FileDocument.png" path="/Icons/" exported="true"/>
+    <image id="oxxbes" name="UI_Icon_FileFolder.png" path="/Icons/" exported="true"/>
+    <image id="oxxbet" name="UI_Icon_Fill.png" path="/Icons/" exported="true"/>
+    <image id="oxxbeu" name="UI_Icon_Film.png" path="/Icons/" exported="true"/>
+    <image id="oxxbev" name="UI_Icon_FilmPlay.png" path="/Icons/" exported="true"/>
+    <image id="oxxbew" name="UI_Icon_Filter.png" path="/Icons/" exported="true"/>
+    <image id="oxxbex" name="UI_Icon_Fire.png" path="/Icons/" exported="true"/>
+    <image id="oxxbey" name="UI_Icon_Flag.png" path="/Icons/" exported="true"/>
+    <image id="oxxbez" name="UI_Icon_FullscreenEnter.png" path="/Icons/" exported="true"/>
+    <image id="oxxbf0" name="UI_Icon_FullscreenExit.png" path="/Icons/" exported="true"/>
+    <image id="oxxbf1" name="UI_Icon_GenderFemale1.png" path="/Icons/" exported="true"/>
+    <image id="oxxbf2" name="UI_Icon_GenderFemale2.png" path="/Icons/" exported="true"/>
+    <image id="oxxbf3" name="UI_Icon_GenderMale1.png" path="/Icons/" exported="true"/>
+    <image id="oxxbf4" name="UI_Icon_GenderMale2.png" path="/Icons/" exported="true"/>
+    <image id="oxxbf5" name="UI_Icon_Gift.png" path="/Icons/" exported="true"/>
+    <image id="oxxbf6" name="UI_Icon_Globe.png" path="/Icons/" exported="true"/>
+    <image id="oxxbf7" name="UI_Icon_Hammer.png" path="/Icons/" exported="true"/>
+    <image id="oxxbf8" name="UI_Icon_Heart.png" path="/Icons/" exported="true"/>
+    <image id="oxxbf9" name="UI_Icon_HeartEmpty.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfa" name="UI_Icon_Home.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfb" name="UI_Icon_Infinite.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfc" name="UI_Icon_Info.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfd" name="UI_Icon_InputController.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfe" name="UI_Icon_InputJoystick.png" path="/Icons/" exported="true"/>
+    <image id="oxxbff" name="UI_Icon_InputKeyboard.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfg" name="UI_Icon_InvBelt.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfh" name="UI_Icon_InvBoots.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfi" name="UI_Icon_InvChest.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfj" name="UI_Icon_InvCloak.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfk" name="UI_Icon_InvGloves.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfl" name="UI_Icon_InvHelmet.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfm" name="UI_Icon_Invisible.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfn" name="UI_Icon_InvPants.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfo" name="UI_Icon_InvPotion.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfp" name="UI_Icon_InvRing.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfq" name="UI_Icon_Key.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfr" name="UI_Icon_Leaf.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfs" name="UI_Icon_Like.png" path="/Icons/" exported="true"/>
+    <image id="oxxbft" name="UI_Icon_List.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfu" name="UI_Icon_Location.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfv" name="UI_Icon_LockLocked.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfw" name="UI_Icon_LockUnlocked.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfx" name="UI_Icon_Loop.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfy" name="UI_Icon_Mail.png" path="/Icons/" exported="true"/>
+    <image id="oxxbfz" name="UI_Icon_Map.png" path="/Icons/" exported="true"/>
+    <image id="oxxbg0" name="UI_Icon_Medal.png" path="/Icons/" exported="true"/>
+    <image id="oxxbg1" name="UI_Icon_Menu.png" path="/Icons/" exported="true"/>
+    <image id="oxxbg2" name="UI_Icon_Merge.png" path="/Icons/" exported="true"/>
+    <image id="oxxbg3" name="UI_Icon_MicOff.png" path="/Icons/" exported="true"/>
+    <image id="oxxbg4" name="UI_Icon_MicOn.png" path="/Icons/" exported="true"/>
+    <image id="oxxbg5" name="UI_Icon_Mirror.png" path="/Icons/" exported="true"/>
+    <image id="oxxbg6" name="UI_Icon_Moon.png" path="/Icons/" exported="true"/>
+    <image id="oxxbg7" name="UI_Icon_MultiPlayer.png" path="/Icons/" exported="true"/>
+    <image id="oxxbg8" name="UI_Icon_MusicOff.png" path="/Icons/" exported="true"/>
+    <image id="oxxbg9" name="UI_Icon_MusicOn.png" path="/Icons/" exported="true"/>
+    <image id="oxxbga" name="UI_Icon_NewPlayer.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgb" name="UI_Icon_OnOff.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgc" name="UI_Icon_Pause.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgd" name="UI_Icon_Percentage.png" path="/Icons/" exported="true"/>
+    <image id="oxxbge" name="UI_Icon_Photo.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgf" name="UI_Icon_Play.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgg" name="UI_Icon_PlayBackwards.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgh" name="UI_Icon_Plus.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgi" name="UI_Icon_Question.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgj" name="UI_Icon_Refresh.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgk" name="UI_Icon_Reload.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgl" name="UI_Icon_Results.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgm" name="UI_Icon_Return.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgn" name="UI_Icon_Rewind.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgo" name="UI_Icon_RotateLeft.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgp" name="UI_Icon_RotateRight.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgq" name="UI_Icon_Sale.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgr" name="UI_Icon_Sandclock.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgs" name="UI_Icon_Save1.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgt" name="UI_Icon_Save2.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgu" name="UI_Icon_Search.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgv" name="UI_Icon_Select.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgw" name="UI_Icon_Settings.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgx" name="UI_Icon_Share.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgy" name="UI_Icon_ShoppingCart.png" path="/Icons/" exported="true"/>
+    <image id="oxxbgz" name="UI_Icon_Shuffle.png" path="/Icons/" exported="true"/>
+    <image id="oxxbh0" name="UI_Icon_SinglePlayer.png" path="/Icons/" exported="true"/>
+    <image id="oxxbh1" name="UI_Icon_Skip.png" path="/Icons/" exported="true"/>
+    <image id="oxxbh2" name="UI_Icon_SkipBack.png" path="/Icons/" exported="true"/>
+    <image id="oxxbh3" name="UI_Icon_Skull.png" path="/Icons/" exported="true"/>
+    <image id="oxxbh4" name="UI_Icon_Sleep.png" path="/Icons/" exported="true"/>
+    <image id="oxxbh5" name="UI_Icon_Sliders.png" path="/Icons/" exported="true"/>
+    <image id="oxxbh6" name="UI_Icon_SmileyDead.png" path="/Icons/" exported="true"/>
+    <image id="oxxbh7" name="UI_Icon_SmileyHappy.png" path="/Icons/" exported="true"/>
+    <image id="oxxbh8" name="UI_Icon_SmileyLaughing.png" path="/Icons/" exported="true"/>
+    <image id="oxxbh9" name="UI_Icon_SmileyNeutral.png" path="/Icons/" exported="true"/>
+    <image id="oxxbha" name="UI_Icon_SmileyUnhappy.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhb" name="UI_Icon_SocialFacebook.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhc" name="UI_Icon_SocialInstagram.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhd" name="UI_Icon_SocialTwitter1.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhe" name="UI_Icon_SocialTwitter2.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhf" name="UI_Icon_SocialYoutube.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhg" name="UI_Icon_SoundOff.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhh" name="UI_Icon_SoundOn.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhi" name="UI_Icon_Star.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhj" name="UI_Icon_StarEmpty.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhk" name="UI_Icon_Stats.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhl" name="UI_Icon_Stop.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhm" name="UI_Icon_Stopwatch.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhn" name="UI_Icon_Sun.png" path="/Icons/" exported="true"/>
+    <image id="oxxbho" name="UI_Icon_Swap.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhp" name="UI_Icon_Target.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhq" name="UI_Icon_Text.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhr" name="UI_Icon_ToggleNext.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhs" name="UI_Icon_TogglePrevious.png" path="/Icons/" exported="true"/>
+    <image id="oxxbht" name="UI_Icon_Trophy.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhu" name="UI_Icon_TurnAround.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhv" name="UI_Icon_TurnLeft.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhw" name="UI_Icon_TurnRight.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhx" name="UI_Icon_Versus.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhy" name="UI_Icon_Visible.png" path="/Icons/" exported="true"/>
+    <image id="oxxbhz" name="UI_Icon_Warning.png" path="/Icons/" exported="true"/>
+    <image id="oxxbi0" name="UI_Icon_Water.png" path="/Icons/" exported="true"/>
+    <image id="oxxbi1" name="UI_Icon_Wifi.png" path="/Icons/" exported="true"/>
+    <image id="oxxbi2" name="UI_Icon_WifiProblem.png" path="/Icons/" exported="true"/>
+    <image id="oxxbi3" name="UI_Icon_Wrench.png" path="/Icons/" exported="true"/>
+    <image id="oxxbi4" name="UI_Icon_ZoomIn.png" path="/Icons/" exported="true"/>
+    <image id="oxxbi5" name="UI_Icon_ZoomOut.png" path="/Icons/" exported="true"/>
+    <component id="v2bxi9" name="Button.xml" path="/component/" exported="true"/>
+    <component id="pkm4ib" name="ObjItem.xml" path="/component/" exported="true"/>
+    <component id="qp14ic" name="CloseButton.xml" path="/component/" exported="true"/>
+    <image id="buyiid" name="bg.png" path="/1.0/" exported="true" scale="9grid" scale9grid="10,9,20,18"/>
+    <image id="buyiie" name="blueButton.png" path="/1.0/" exported="true"/>
+    <image id="buyiif" name="blueButton2.png" path="/1.0/" exported="true"/>
+    <image id="buyiig" name="content.png" path="/1.0/" exported="true" scale="9grid" scale9grid="10,9,20,18"/>
+    <image id="buyiih" name="content2.png" path="/1.0/" exported="true" scale="9grid" scale9grid="10,9,20,18"/>
+    <image id="buyiii" name="DarkButton.png" path="/1.0/" exported="true"/>
+    <image id="buyiij" name="progressBarGreen.png" path="/1.0/" exported="true" scale="9grid" scale9grid="10,6,20,12"/>
+    <image id="buyiik" name="title.png" path="/1.0/" exported="true" scale="9grid" scale9grid="10,9,20,18"/>
+    <image id="f6s9il" name="greenBg.png" path="/1.0/" exported="true" scale="9grid" scale9grid="10,9,20,18"/>
+    <component id="f6s9im" name="ProgressBar.xml" path="/component/" exported="true"/>
+    <image id="f6s9in" name="progreeBgUp.png" path="/1.0/" exported="true"/>
+    <image id="f6s9io" name="blueBg.png" path="/1.0/"/>
+  </resources>
+  <publish name="Common" genCode="true"/>
+</packageDescription>

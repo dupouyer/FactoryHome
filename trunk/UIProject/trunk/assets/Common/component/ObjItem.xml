@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component size="60,60" extention="Button">
-  <displayList>
-    <image id="n0_pkm4" name="bg" src="oxxbch" xy="0,0"/>
-    <loader id="n1_pkm4" name="icon" xy="4,4" size="52,52" url="ui://8ryvqyd07zpb17" fill="scale"/>
-    <text id="n2_vm4r" name="num" xy="28,33" size="28,27" fontSize="20" color="#ffffff" align="right" strokeColor="#000000" strokeSize="2" singleLine="true" text="10"/>
-  </displayList>
-  <Button mode="Radio" downEffect="scale" downEffectValue="1.20"/>
-</component>

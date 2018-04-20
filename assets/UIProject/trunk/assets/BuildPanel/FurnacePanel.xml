@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="280,356">
+  <displayList>
+    <image id="n14_f6s9" name="n14" src="buyiik" pkg="qqw7du1h" xy="0,0" size="280,36"/>
+    <image id="n13_f6s9" name="n13" src="buyiid" pkg="qqw7du1h" xy="0,33" size="280,327"/>
+    <text id="n3_ptl3" name="name" xy="39,2" size="206,39" fontSize="24" color="#ffffff" align="center" autoSize="none" text="Title"/>
+    <component id="n7_ptl3" name="close" src="qp14ic" pkg="qqw7du1h" xy="251,6"/>
+    <component id="n22_f6s9" name="progress" src="f6s9im" pkg="qqw7du1h" xy="40,184">
+      <ProgressBar value="50" max="100"/>
+    </component>
+    <component id="n11_ptl3" name="fuelSlot" src="pkm4ib" pkg="qqw7du1h" xy="182,99" group="n23_f6s9"/>
+    <image id="n17_f6s9" name="n17" src="buyiih" pkg="qqw7du1h" xy="182,61" size="60,24" group="n23_f6s9"/>
+    <text id="n12_ptl3" name="name" xy="188,62" size="47,27" group="n23_f6s9" fontSize="18" color="#ffffff" align="center" autoSize="none" text="燃料"/>
+    <image id="n16_f6s9" name="n16" src="buyiih" pkg="qqw7du1h" xy="35,60" size="100,100" group="n25_f6s9"/>
+    <image id="n15_f6s9" name="n15" src="buyiig" pkg="qqw7du1h" xy="35,60" size="97,97" group="n25_f6s9"/>
+    <loader id="n8_ptl3" name="icon" xy="35,60" size="95,95" group="n25_f6s9" url="ui://8ryvqyd07zpb25" fill="scale"/>
+    <group id="n25_f6s9" name="n25" xy="35,60" size="100,100" group="n23_f6s9"/>
+    <image id="n18_f6s9" name="n18" src="f6s9il" pkg="qqw7du1h" xy="172,249" size="66,66"/>
+    <group id="n23_f6s9" name="n23" xy="35,60" size="207,100"/>
+    <component id="n5_ptl3" name="plateSlot" src="pkm4ib" pkg="qqw7du1h" xy="175,251"/>
+    <component id="n10_ptl3" name="oreSlot" src="pkm4ib" pkg="qqw7du1h" xy="48,253"/>
+  </displayList>
+</component>
