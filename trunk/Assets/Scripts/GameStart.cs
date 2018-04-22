@@ -26,7 +26,7 @@ public class GameStart : MonoBehaviour {
 
     private void handleOnMove(Vector3 direction) {
         direction *= CameraSpeed * Time.deltaTime;
-        cameraPos += new Vector3(direction.y, direction.z , -direction.x);
+        cameraPos += new Vector3(-direction.y, direction.z , direction.x);
     }
 
     // Update is called once per frame
