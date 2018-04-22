@@ -15,6 +15,9 @@ public class InputManager:MonoBehaviour{
     public delegate void OnDoubleClickDelegate(EntityBase entity);
     private event OnDoubleClickDelegate onDoubleClickEntity;
 
+    public delegate void OnMoveDelegate(Vector3 direction);
+    private event OnMoveDelegate onMoveDelegate;
+
     Plane floor;
 
     public EntityBase currentSelectedEntity;
@@ -23,10 +26,39 @@ public class InputManager:MonoBehaviour{
         floor = new Plane(Vector3.up, Vector3.zero);
     }
 
+    Vector3 downP;
+    Vector3 lastMoveP;
+    Vector3 upP;
+    bool isClick;
+    bool isMove;
+
     void Update() {
-        //Detect when there is a mouse click
-        if (Input.GetMouseButtonUp(0) && !Stage.isTouchOnUI) {
-            //Create a ray from the Mouse click position
+        if (Stage.isTouchOnUI) {
+            return;
+        }
+
+        float clickDistance = -1f;
+
+        if (Input.GetMouseButtonDown(0)) {
+            downP = Input.mousePosition;
+            lastMoveP = downP;
+        }
+
+        // 处理点击
+        if (Input.GetMouseButtonUp(0)) {
+            upP = Input.mousePosition;
+            clickDistance = Mathf.Abs(Vector3.Distance(upP, downP));
+        }
+
+        // 处理移动
+        if (Input.GetMouseButton(0)) {
+            if (onMoveDelegate != null) {
+                onMoveDelegate(Vector3.Normalize(Input.mousePosition - lastMoveP));
+            }
+            lastMoveP = Input.mousePosition;
+        }
+
+        if (clickDistance < 4 && clickDistance >= 0) {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             RaycastHit hit;
@@ -69,6 +101,7 @@ public class InputManager:MonoBehaviour{
                     }
                 }
             }
+
         }
     }
 
@@ -102,5 +135,13 @@ public class InputManager:MonoBehaviour{
 
     public void removeOnDoubleClickEntity(OnDoubleClickDelegate callback) {
         onDoubleClickEntity -= callback;
+    }
+
+    public void addOnMove(OnMoveDelegate callback) {
+        onMoveDelegate += callback;
+    }
+
+    public void removeOnMove(OnMoveDelegate callback) {
+        onMoveDelegate -= callback;
     }
 }

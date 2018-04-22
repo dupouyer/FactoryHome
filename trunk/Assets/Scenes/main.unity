@@ -11252,7 +11252,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1748610911}
   - component: {fileID: 1748610912}
-  - component: {fileID: 1748610910}
   m_Layer: 0
   m_Name: App Config
   m_TagString: Untagged
@@ -11260,17 +11259,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1748610910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1748610909}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecca3b5e63139374d9a13308be5afca1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1748610911
 Transform:
   m_ObjectHideFlags: 0
@@ -11295,6 +11283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ba7cafc7f81eb418a60ecf30681073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraSpeed: 10
 --- !u!1 &1750265708
 GameObject:
   m_ObjectHideFlags: 0

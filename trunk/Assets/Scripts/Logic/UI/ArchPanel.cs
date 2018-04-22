@@ -4,8 +4,6 @@ using FairyGUI;
 
 public class ArchPanel:BaseArchPanel {
     GLoader archIcon;
-    GList inList;
-    SlotItem outSlot;
     GTextField title;
 
     protected override void OnInit() {
@@ -17,11 +15,6 @@ public class ArchPanel:BaseArchPanel {
         close.onClick.Add(Hide);
 
         archIcon = contentPane.GetChild("icon").asLoader;
-
-        inList = contentPane.GetChild("inList").asList;
-        inList.itemRenderer = slotItemRender;
-
-        outSlot = contentPane.GetChild("out") as SlotItem;
     }
 
     void slotItemRender(int index, GObject item) {
@@ -33,7 +26,5 @@ public class ArchPanel:BaseArchPanel {
     override protected void refresh() {
         title.text = entity.config.showName;
         archIcon.url = UIPackage.GetItemURL("Icon", entity.config.id);
-        inList.numItems = entityBase.inSlots != null ? entityBase.inSlots.Length : 0;
-        outSlot.setSlot(entityBase.outSlot);
     }
 }

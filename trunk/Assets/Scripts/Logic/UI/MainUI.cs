@@ -6,10 +6,6 @@ using System;
 public class MainUI : Window{
     GList list;
     GButton rButton;
-    GButton leftButton;
-    GButton rightButton;
-    GButton upButton;
-    GButton downButton;
 
     private Slot[] slotList = new Slot[10];
 
@@ -39,34 +35,9 @@ public class MainUI : Window{
         rButton= contentPane.GetChildAt(2).asButton;
         rButton.onClick.Add(onClickRotation);
 
-        leftButton = contentPane.GetChildAt(3).asButton;
-        leftButton.onClick.Add(clickLeft);
-        rightButton = contentPane.GetChildAt(4).asButton;
-        rightButton.onClick.Add(clickRight);
-        upButton = contentPane.GetChildAt(5).asButton;
-        upButton.onClick.Add(clickUp);
-        downButton = contentPane.GetChildAt(6).asButton;
-        downButton.onClick.Add(clickDown);
-
         Globals.input.addOnClickFloor(handlerClickFloor);
         Globals.input.addOnClickEntity(handlerClickEntity);
         Globals.input.addOnDoubleClickEntity(handlerDoubleClickEntity);
-    }
-
-    void clickUp() {
-        Camera.main.transform.position += Vector3.right;
-    }
-
-    void clickDown() {
-        Camera.main.transform.position += Vector3.left;
-    }
-
-    void clickLeft() {
-        Camera.main.transform.position += Vector3.forward;
-    }
-
-    void clickRight() {
-        Camera.main.transform.position += Vector3.back;
     }
 
     private void handlerDoubleClickEntity(EntityBase entity) {
