@@ -16,4 +16,4 @@ MonoBehaviour:
   panel: FactoryPanel
   archPrefab: {fileID: 1761106986324020, guid: 4f5107b4a8742714cb219f84a676f45f, type: 2}
   meterialPrefab: {fileID: 0}
-  offsetY: 0
+  offsetY: 0.5

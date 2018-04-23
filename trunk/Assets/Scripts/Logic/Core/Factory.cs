@@ -43,6 +43,7 @@ public class Factory : EntityBase {
         }
         workingTime -= blueprint.time;
         Globals.entityManager.produceEntity(blueprint, inSlots, outSlot);
+        resetWorkingState();
     }
 
     private void resetWorkingState() {
