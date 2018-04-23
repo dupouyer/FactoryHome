@@ -54,6 +54,7 @@ GameObject:
   - component: {fileID: 4749003384104158}
   - component: {fileID: 65124937732861566}
   - component: {fileID: 114622839679674770}
+  - component: {fileID: 95147786622581990}
   m_Layer: 8
   m_Name: stone-furnace
   m_TagString: Untagged
@@ -117,7 +118,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4961089545918452}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!4 &4961089545918452
 Transform:
   m_ObjectHideFlags: 1
@@ -227,6 +228,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &95147786622581990
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1243426568000310}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 890e035fdfd308a4e968f83a838745bb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &95211111197330614
 Animator:
   serializedVersion: 3

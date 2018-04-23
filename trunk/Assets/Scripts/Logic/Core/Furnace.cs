@@ -9,6 +9,10 @@ public class Furnace : EntityBase {
 
     public Slot fuelSlot;
 
+    Animator animator;
+
+    int WORK_HASH = Animator.StringToHash("isWorking");
+
 	// Use this for initialization
 	void Start () {
         inSlots = new Slot[1] {new Slot()};
@@ -17,11 +21,14 @@ public class Furnace : EntityBase {
 
         // 获取备选蓝图
         backBlueprints = Globals.configManager.GetBlueprintConfig(EntityConfig.TYPE.plate);
+
+        animator = GetComponent<Animator>();
     }
 
 	// Update is called once per frame
 	void Update () {
         if (isWorking) {
+            animator.SetBool(WORK_HASH, true);
             workingTime += workSpeed * Time.deltaTime;
 
             if (workingTime > blueprint.time) {
@@ -34,7 +41,7 @@ public class Furnace : EntityBase {
             }
         }
         else {
-            workingTime = 0f;
+            animator.SetBool(WORK_HASH, false);
         }
     }
 

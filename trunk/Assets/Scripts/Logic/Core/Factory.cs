@@ -7,6 +7,10 @@ public class Factory : EntityBase {
 
     public BlueprintConfig blueprint;
 
+    Animator animator;
+
+    int WORK_HASH = Animator.StringToHash("isWorking");
+
     // Use this for initialization
     void Start() {
         outSlot = new Slot();
@@ -14,15 +18,21 @@ public class Factory : EntityBase {
         for (int i = 0; i < slotNum; i ++) {
             inSlots[i] = new Slot();
         }
+
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update() {
         if (isWorking) {
+            animator.SetBool(WORK_HASH, true);
             workingTime += workSpeed * Time.deltaTime;
             if (workingTime > blueprint.time) {
                 produce();
             }
+        }
+        else {
+            animator.SetBool(WORK_HASH, false);
         }
     }
 
