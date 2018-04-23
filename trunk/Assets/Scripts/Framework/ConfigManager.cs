@@ -29,6 +29,15 @@ public class ConfigManager {
         return configs;
     }
 
+    public EntityConfig[] getEntityConfigs() {
+        Object[] objs = Resources.LoadAll("Config/Entity/");
+        EntityConfig[] outConfig = new EntityConfig[objs.Length];
+        for (int i = 0; i < objs.Length; i++) {
+            outConfig[i] = objs[i] as EntityConfig;
+        }
+        return outConfig;
+    }
+
     public EntityConfig[] getEntityConfigs(EntityConfig.TYPE type, EntityConfig.TYPE type2) {
         EntityConfig[] configs;
         int num = 0;
@@ -60,5 +69,30 @@ public class ConfigManager {
         }
 
         return configs;
+    }
+
+    public BlueprintConfig[] GetBlueprintConfig(int slotNum) {
+        EntityConfig[] eConfigs = getEntityConfigs();
+        BlueprintConfig[] configs = new BlueprintConfig[eConfigs.Length];
+
+        int num = 0;
+        for (int i = 0; i < eConfigs.Length; i++) {
+            configs[i] = getConfig<BlueprintConfig>("Blueprint/" + eConfigs[i].id);
+            if (configs[i] && configs[i].inEntities.Length == slotNum) {
+                num++;
+            }
+        }
+
+        BlueprintConfig[] outConfigs = new BlueprintConfig[num];
+        int index = 0;
+        for (int i = 0; i < eConfigs.Length; i++) {
+            configs[i] = getConfig<BlueprintConfig>("Blueprint/" + eConfigs[i].id);
+            if (configs[i] && configs[i].inEntities.Length == slotNum) {
+                outConfigs[index] = configs[i];
+                index++;
+            }
+        }
+
+        return outConfigs;
     }
 }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="280,304">
+  <controller name="c1" pages="0,,1," selected="1"/>
+  <displayList>
+    <image id="n0_m3ne" name="n0" src="buyiik" pkg="qqw7du1h" xy="0,0" size="280,36"/>
+    <image id="n1_m3ne" name="n1" src="buyiid" pkg="qqw7du1h" xy="0,33" size="280,270">
+      <gearSize controller="c1" pages="0,1" values="280,160,1,1|280,270,1,1"/>
+    </image>
+    <image id="n2_m3ne" name="n2" src="buyiih" pkg="qqw7du1h" xy="182,65" size="60,26"/>
+    <text id="n3_m3ne" name="name" xy="37,2" size="206,31" fontSize="24" color="#cccccc" align="center" autoSize="none" text="Title"/>
+    <component id="n4_m3ne" name="out" src="pkm4ib" pkg="qqw7du1h" xy="182,103"/>
+    <component id="n5_m3ne" name="close" src="qp14ic" pkg="qqw7du1h" xy="249,4"/>
+    <text id="n6_m3ne" name="name" xy="188,67" size="47,26" fontSize="18" color="#ffffff" align="center" autoSize="none" text="产出"/>
+    <image id="n7_m3ne" name="n7" src="buyiih" pkg="qqw7du1h" xy="36,63" size="101,101" group="n10_m3ne"/>
+    <image id="n8_m3ne" name="n8" src="buyiig" pkg="qqw7du1h" xy="36,63" size="98,98" group="n10_m3ne"/>
+    <loader id="n9_m3ne" name="icon" xy="36,63" size="96,96" group="n10_m3ne" url="ui://8ryvqyd07zpb25" fill="scale"/>
+    <group id="n10_m3ne" name="n10" xy="36,63" size="101,101"/>
+    <component id="n11_m3ne" name="progress" src="f6s9im" pkg="qqw7du1h" xy="37,184">
+      <gearDisplay controller="c1" pages="1"/>
+      <ProgressBar value="50" max="100"/>
+    </component>
+    <list id="n12_m3ne" name="targetList" xy="8,228" size="271,73" layout="pagination" overflow="scroll" lineGap="8" colGap="8" lineItemCount="4" lineItemCount2="2" defaultItem="ui://qqw7du1hpkm4ib">
+      <gearDisplay controller="c1" pages="1"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

@@ -23,6 +23,7 @@ public class MainUI : Window{
         Globals.entityManager.CreateToSlot("stone-furnace", 100, slotList[3]);
         Globals.entityManager.CreateToSlot("transport-belt", 100, slotList[4]);
         Globals.entityManager.CreateToSlot("burner-mining-drill", 10, slotList[5]);
+        Globals.entityManager.CreateToSlot("assembling-machine-1", 10, slotList[6]);
     }
 
     protected override void OnInit() {
@@ -52,6 +53,9 @@ public class MainUI : Window{
                 break;
             case "FurnacePanel":
                 panel = new FurnacePanel();
+                break;
+            case "FactoryPanel":
+                panel = new FactoryPanel();
                 break;
         }
         if (panel != null) {

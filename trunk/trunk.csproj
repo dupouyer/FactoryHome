@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.3.1f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -432,6 +434,7 @@
     <Compile Include="Assets\External\FairyGUI\Scripts\Utils\XMLList.cs" />
     <Compile Include="Assets\External\FairyGUI\Scripts\Utils\XMLUtils.cs" />
     <Compile Include="Assets\External\FairyGUI\Scripts\Utils\ZipReader.cs" />
+    <Compile Include="Assets\Scenes\test.cs" />
     <Compile Include="Assets\Scripts\Config\BlueprintConfig.cs" />
     <Compile Include="Assets\Scripts\Config\EntityConfig.cs" />
     <Compile Include="Assets\Scripts\Framework\ConfigManager.cs" />
@@ -445,17 +448,21 @@
     <Compile Include="Assets\Scripts\GameStart.cs" />
     <Compile Include="Assets\Scripts\Logic\Core\Arm.cs" />
     <Compile Include="Assets\Scripts\Logic\Core\EntityBase.cs" />
+    <Compile Include="Assets\Scripts\Logic\Core\Factory.cs" />
     <Compile Include="Assets\Scripts\Logic\Core\Furnace.cs" />
     <Compile Include="Assets\Scripts\Logic\Core\HitBox.cs" />
     <Compile Include="Assets\Scripts\Logic\Core\Materail.cs" />
     <Compile Include="Assets\Scripts\Logic\Core\MiningDrill.cs" />
     <Compile Include="Assets\Scripts\Logic\Core\Transport.cs" />
+    <Compile Include="Assets\Scripts\Logic\Core\TransportByCollider.cs" />
     <Compile Include="Assets\Scripts\Logic\UI\ArchPanel.cs" />
     <Compile Include="Assets\Scripts\Logic\UI\BaseArchPanel.cs" />
     <Compile Include="Assets\Scripts\Logic\UI\ExtensionGUI\SlotItem.cs" />
+    <Compile Include="Assets\Scripts\Logic\UI\FactoryPanel.cs" />
     <Compile Include="Assets\Scripts\Logic\UI\FurnacePanel.cs" />
     <Compile Include="Assets\Scripts\Logic\UI\MainUI.cs" />
     <Compile Include="Assets\Scripts\Logic\UI\MiningDrillPanel.cs" />
+    <Compile Include="Assets\Scripts\Logic\UI\BlueprintPanel.cs" />
     <Compile Include="Assets\Scripts\UI\Common\CommonBinder.cs" />
     <Compile Include="Assets\Scripts\UI\Common\UI_Button.cs" />
     <Compile Include="Assets\Scripts\UI\Common\UI_CloseButton.cs" />

@@ -12,4 +12,7 @@ public class Globals {
     public static int LAYER_MATERIAL = 9;
     public static int LAYER_HITBOX = 10;
     public static int LAYER_TRANSPORT = 11;
+
+    public static int FLAG_STATIC = -1;
+    public static int FLAG_IDLE = 0;
 }

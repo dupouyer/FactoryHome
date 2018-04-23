@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="279,303">
+  <displayList>
+    <image id="n0_m3ne" name="n0" src="buyiik" pkg="qqw7du1h" xy="0,0" size="280,36"/>
+    <image id="n1_m3ne" name="n1" src="buyiid" pkg="qqw7du1h" xy="0,33" size="280,270"/>
+    <text id="n3_m3ne" name="name" xy="36,2" size="206,31" fontSize="24" color="#cccccc" align="center" autoSize="none" text="Title"/>
+    <component id="n5_m3ne" name="close" src="qp14ic" pkg="qqw7du1h" xy="248,4"/>
+    <list id="n12_m3ne" name="targetList" xy="6,37" size="271,254" layout="pagination" overflow="scroll" lineGap="8" colGap="8" lineItemCount="4" lineItemCount2="2" defaultItem="ui://qqw7du1hpkm4ib" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

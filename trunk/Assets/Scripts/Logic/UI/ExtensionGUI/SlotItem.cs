@@ -18,7 +18,13 @@ public class SlotItem : UI_ObjItem{
     }
 
     public void setConfig(EntityConfig entityConfig) {
-        m_icon.url = UIPackage.GetItemURL("Icon", entityConfig.id);
-        m_num.text = "";
+        if (entityConfig == null) {
+            m_icon.url = null;
+            m_num.text = "";
+        }
+        else {
+            m_icon.url = UIPackage.GetItemURL("Icon", entityConfig.id);
+            m_num.text = "";
+        }
     }
 }

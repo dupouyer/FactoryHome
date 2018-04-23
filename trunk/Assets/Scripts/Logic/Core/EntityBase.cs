@@ -10,6 +10,8 @@ public class EntityBase : MonoBehaviour {
         DOWN = 4
     };
 
+    public int flag = Globals.FLAG_STATIC;
+
     // 输入插槽
     public Slot[] inSlots;
     // 输出插槽
