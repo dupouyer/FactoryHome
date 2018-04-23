@@ -25,16 +25,12 @@ public class Furnace : EntityBase {
             workingTime += workSpeed * Time.deltaTime;
 
             if (workingTime > blueprint.time) {
-                workingTime -= blueprint.time;
-                resetWorkingState();
-                if (isWorking) {
-                    produce();
-                    //TODO 暂时写死
-                    if (!inSlots[0].checkAvailable() && outSlot.checkAvailable()) {
-                        resetProduceBlueprint(null);
-                    }
-                    resetWorkingState();
+                produce();
+                //TODO 暂时写死
+                if (!inSlots[0].checkAvailable() && outSlot.checkAvailable()) {
+                    resetProduceBlueprint(null);
                 }
+                resetWorkingState();
             }
         }
         else {
@@ -66,16 +62,21 @@ public class Furnace : EntityBase {
 
     // 产出产品
     void produce() {
+        resetWorkingState();
+        if (!isWorking) {
+            return;
+        }
+        workingTime -= blueprint.time;
         Globals.entityManager.produceEntity(blueprint, inSlots, outSlot);
     }
 
-    override public bool pushEntity(GameObject gameObject) {
-        Entity entity = Globals.entityManager.getEntityByGameObject(gameObject);
+    override public bool pushEntity(GameObject obj) {
+        Entity entity = Globals.entityManager.getEntityByGameObject(obj);
         bool success = false;
 
         if (entity.config.type == EntityConfig.TYPE.fuel) {
             if (!fuelSlot.checkAvailable() || fuelSlot.entity == entity) {
-                fuelSlot.pushEntity(gameObject);
+                fuelSlot.pushEntity(obj);
                 success = true;
             }
         }
@@ -83,16 +84,16 @@ public class Furnace : EntityBase {
         else if (blueprint) {
             int index = blueprint.getSlotIndex(entity);
             if (index >= 0) {
-                inSlots[index].pushEntity(gameObject);
+                inSlots[index].pushEntity(obj);
                 success = true;
             }
         }
         else {
-            foreach (BlueprintConfig bc in backBlueprints) {
-                int index = bc.getSlotIndex(entity);
+            foreach (BlueprintConfig backBlueprint in backBlueprints) {
+                int index = backBlueprint.getSlotIndex(entity);
                 if (index >= 0) {
-                    resetProduceBlueprint(bc);
-                    inSlots[index].pushEntity(gameObject);
+                    resetProduceBlueprint(backBlueprint);
+                    inSlots[index].pushEntity(obj);
                     success = true;
                     break;
                 }

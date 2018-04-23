@@ -25,7 +25,7 @@ public class Transport : EntityBase {
     void Start() {
         prev = transform.GetChild(0).GetComponent<HitBox>();
         next = transform.GetChild(1).GetComponent<HitBox>();
-        next.onTriggerTransport += handlerNextTransport;
+        //next.onTriggerTransport += handlerNextTransport;
 
         platform = transform.GetChild(2);
         platformShow = transform.GetChild(3);
@@ -63,7 +63,7 @@ public class Transport : EntityBase {
         }
 
         if (next.transport) {
-            next.transport.UpdateTransport();
+            //next.transport.UpdateTransport();
         }
     }
 
@@ -153,7 +153,7 @@ public class Transport : EntityBase {
 
     public void popCargo(int uindex) {
         if (prev.transport) {
-            prev.transport.pushCargo(pos[uindex], pos[uindex].transform.position);
+            //prev.transport.pushCargo(pos[uindex], pos[uindex].transform.position);
         }
         else {
             if (pos[uindex]is Materail) {
@@ -178,7 +178,7 @@ public class Transport : EntityBase {
 
     private void handlerNextTransport(Transport transport) {
         if (next.transport) {
-            next.transport.isHead = false;
+            //next.transport.isHead = false;
         }
         else {
             transport.isHead = true;
@@ -187,7 +187,7 @@ public class Transport : EntityBase {
 
     private void OnDestroy() {
         if (next.transport) {
-            next.transport.isHead = true;
+            //next.transport.isHead = true;
         }
     }
 }

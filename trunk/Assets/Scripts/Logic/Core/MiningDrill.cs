@@ -7,7 +7,7 @@ public class MiningDrill : EntityBase {
 
     // 出口碰撞检查
     HitBox outHitBox;
-    public Transport outTransport;
+    public TransportByCollider outTransport;
 
     Animator animator;
 
@@ -20,7 +20,7 @@ public class MiningDrill : EntityBase {
         outSlot = new Slot();
         outHitBox = GetComponentInChildren<HitBox>();
 
-        outHitBox.onTriggerTransport += delegate(Transport transport) {
+        outHitBox.onTriggerTransport += delegate(TransportByCollider transport) {
             outTransport = outHitBox.transport;
         };
 
@@ -49,10 +49,12 @@ public class MiningDrill : EntityBase {
 
     void produce() {
         Globals.entityManager.CreateToSlot(ore.id, 1, outSlot);
+
         EntityBase oreEntity = outSlot.instantiateEntity(false, transform.position + Vector3.forward, false).GetComponent<EntityBase>();
+
         Vector3 offset = Vector3.right * Random.Range(-0.25f, 0.25f);
-        Vector3 p = outHitBox.transform.TransformPoint(offset);
-        outTransport.pushCargo(oreEntity, p);
+        oreEntity.gameObject.transform.position = outHitBox.transform.TransformPoint(offset);
+
         oreEntity.gameObject.GetComponent<Collider>().enabled = true;
     }
 }

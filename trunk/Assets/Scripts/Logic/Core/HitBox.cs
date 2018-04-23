@@ -6,14 +6,14 @@ public class HitBox: MonoBehaviour {
     // 材料
     public List<GameObject> materials = new List<GameObject>();
     // 传送带
-    public Transport transport;
+    public TransportByCollider transport;
     // 实体
     public EntityBase entity;
 
     public delegate void onTriggerEnterDelegate(Collider other);
     public delegate void onTriggerExitDelegate(Collider other);
     public delegate void onTrigerEntityDelegate(EntityBase entity);
-    public delegate void onTrigerTransportDelegate(Transport transport);
+    public delegate void onTrigerTransportDelegate(TransportByCollider transport);
 
     public event onTriggerEnterDelegate onTriggerEnter;
     public event onTriggerExitDelegate onTriggerExit;
@@ -47,7 +47,7 @@ public class HitBox: MonoBehaviour {
             materials.Add(other.gameObject);
         }
         else if(other.gameObject.layer == Globals.LAYER_TRANSPORT){
-            transport = other.gameObject.GetComponent<Transport>();
+            transport = other.gameObject.GetComponent<TransportByCollider>();
             if (onTriggerTransport != null) {
                 onTriggerTransport(transport);
             }
@@ -71,7 +71,7 @@ public class HitBox: MonoBehaviour {
         else if(other.gameObject.layer == Globals.LAYER_TRANSPORT){
             transport = null;
             if (onTriggerTransport != null) {
-                onTriggerTransport(other.GetComponent<Transport>());
+                onTriggerTransport(other.GetComponent<TransportByCollider>());
             }
         }
 

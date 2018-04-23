@@ -49,6 +49,10 @@ public class Arm : EntityBase {
             // 货物绑定在手指上
             cargo.transform.SetParent(fingerPoint);
             cargo.transform.localPosition = Vector3.zero;
+            EntityBase cargoEntity = cargo.GetComponent<EntityBase>();
+            if (cargoEntity) {
+                cargoEntity.flag = Globals.FLAG_IDLE;
+            }
             isWorking = true;
         }
         // 放置货物
@@ -67,9 +71,10 @@ public class Arm : EntityBase {
                     }
                 }
                 else {
-                    cargo.GetComponent<Collider>().enabled = true;
                     // 从手指上移除
                     cargo.transform.SetParent(null);
+
+                    cargo.GetComponent<Collider>().enabled = true;
                     isWorking = false;
                 }
             }
