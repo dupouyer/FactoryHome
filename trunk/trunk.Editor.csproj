@@ -322,7 +322,9 @@
     <None Include="Assets\External\FairyGUI\Resources\Shaders\FairyGUI-Text.shader" />
     <None Include="Assets\Resources\Shader\AntialiasedCelShading.shader" />
     <None Include="Assets\Resources\Shader\BackgroundShading.shader" />
+    <None Include="Assets\Resources\Shader\Hatching.shader" />
     <None Include="Assets\Resources\Shader\PencilSketchShading.shader" />
+    <None Include="Assets\Resources\Shader\TileBackgroundShading.shader" />
     <None Include="Assets\Resources\Shader\UVAnim.shader" />
     <None Include="Assets\Resources\Shader\Unitychan_chara_hada.shader" />
     <None Include="Assets\Resources\Shader\Unitychan_chara_hada_blend.shader" />
