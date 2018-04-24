@@ -3,3 +3,28 @@ trunk/.vs/trunk/v15/Server/sqlite3/storage.ide
 trunk/.vs/trunk/v15/Server/sqlite3/storage.ide-shm
 trunk/.vs/trunk/v15/Server/sqlite3/storage.ide-wal
 trunk/Temp/
+trunk/Library
+
+
+# ----[ Visual Studio / MonoDevelop generated ]------- #
+ 
+ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+
+# -------------[ OS generated ]------------------------ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
