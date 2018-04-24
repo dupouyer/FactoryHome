@@ -48,6 +48,12 @@ public class EntityManager {
         return entity;
     }
 
+    public Entity destory(EntityBase entityBase) {
+        Entity entity = getEntityByGameObject(entityBase.gameObject);
+        GameObject.Destroy(entityBase.gameObject);
+        return destory(entity.id, 1);
+    }
+
     public Entity GetEntity(string id) {
         Entity entity;
 

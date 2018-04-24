@@ -6,6 +6,7 @@ using System;
 public class MainUI : Window{
     GList list;
     GButton rButton;
+    GButton delButton;
 
     private Slot[] slotList = new Slot[10];
 
@@ -36,9 +37,19 @@ public class MainUI : Window{
         rButton= contentPane.GetChildAt(2).asButton;
         rButton.onClick.Add(onClickRotation);
 
+        delButton = contentPane.GetChild("delBtn").asButton;
+        delButton.onClick.Add(onClickDel);
+
         Globals.input.addOnClickFloor(handlerClickFloor);
         Globals.input.addOnClickEntity(handlerClickEntity);
         Globals.input.addOnDoubleClickEntity(handlerDoubleClickEntity);
+    }
+
+    private void onClickDel(EventContext context) {
+        if (Globals.input.currentSelectedEntity) {
+            Globals.entityManager.destory(Globals.input.currentSelectedEntity);
+            Globals.input.currentSelectedEntity = null;
+        }
     }
 
     private void handlerDoubleClickEntity(EntityBase entity) {

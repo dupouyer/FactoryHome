@@ -14,6 +14,7 @@
       <item/>
       <item/>
     </list>
-    <component id="n28_vm4r" name="n28" src="vm4r9" xy="1182,337" controller="c1,0"/>
+    <component id="n28_vm4r" name="dirBtn" src="vm4r9" xy="1196,279" controller="c1,0"/>
+    <component id="n32_iqcv" name="delBtn" src="iqcva" xy="1201,593"/>
   </displayList>
 </component>

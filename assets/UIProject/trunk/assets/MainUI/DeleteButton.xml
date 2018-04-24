@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="62,64" extention="Button">
+  <displayList>
+    <image id="n32_iqcv" name="n32" src="oxxbdd" pkg="qqw7du1h" xy="0,0" size="62,64"/>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.80"/>
+</component>
