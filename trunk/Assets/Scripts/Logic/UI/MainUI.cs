@@ -43,6 +43,8 @@ public class MainUI : Window{
         Globals.input.addOnClickFloor(handlerClickFloor);
         Globals.input.addOnClickEntity(handlerClickEntity);
         Globals.input.addOnDoubleClickEntity(handlerDoubleClickEntity);
+
+        setDirection(Globals.entityManager.defaultDir);
     }
 
     private void onClickDel(EventContext context) {
@@ -80,10 +82,18 @@ public class MainUI : Window{
             Globals.input.currentSelectedEntity.changeDirection(true);
             handlerClickEntity(Globals.input.currentSelectedEntity);
         }
+        else {
+            Globals.entityManager.defaultDir =  (EntityBase.DIRECTION)((int)Globals.entityManager.defaultDir % 4 + 1);
+            setDirection(Globals.entityManager.defaultDir);
+        }
     }
 
     private void handlerClickEntity(EntityBase entity) {
-        rButton.GetController("c1").SetSelectedIndex((int)entity.direction - 1);
+        setDirection(entity.direction);
+    }
+
+    private void setDirection(EntityBase.DIRECTION dir) {
+        rButton.GetController("c1").SetSelectedIndex((int)dir - 1);
     }
 
     void  handlerClickFloor(Vector3 point) {

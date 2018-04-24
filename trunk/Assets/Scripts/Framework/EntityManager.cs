@@ -68,12 +68,15 @@ public class EntityManager {
 
     Dictionary<int, Entity> entityInstMap = new Dictionary<int, Entity>();
 
+    public EntityBase.DIRECTION defaultDir = EntityBase.DIRECTION.LEFT;
+
     public GameObject instantiateEntity(Entity entity, bool isArch, Vector3 pos, bool colliderEnable) {
         // 实例化显示对象
         GameObject gobj = Object.Instantiate(isArch && entity.config.archPrefab ? entity.config.archPrefab : entity.config.meterialPrefab);
         gobj.GetComponent<Collider>().enabled = colliderEnable;
         pos.y += entity.config.offsetY;
         gobj.transform.position = pos;
+        gobj.GetComponent<EntityBase>().changeDirection(defaultDir);
         entityInstMap.Add(gobj.GetInstanceID(), entity);
 
         return gobj;
