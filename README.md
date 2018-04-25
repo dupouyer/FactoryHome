@@ -14,13 +14,16 @@
 ### LoaderManager
 * 资源加载
 
-### ObjectManager
+### EnityManager
 * 管理物件
 * 创建物件
 * 销毁物件
 
-### Object
- 一个物件,可通过配置实例化所属 GameObject
+### Entity
+ 物件的数据配置
+
+### EntityBase
+ 物件的组件实现基类
 
 ### ModeConfig
 一个 GameObject 的配置,可通过此配置生产一个 GameObject
