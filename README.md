@@ -1,39 +1,5 @@
-# README #
-
-This README would normally document whatever steps are necessary to get your application up and running.
-
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-Build a unity game for mobile phone
-
-How
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
-
-# Framework #
-
+# Framework
+---
 ### Globals  
 * 放置一些全局功能的引用
 
@@ -69,12 +35,13 @@ How
 一个物件的蓝图
 
 开发日志: 
+---
 3-30:
 蓝图生产系统
 角色控制
 角色控制 UI
 渲染效果
-
+---
 4-6
 实体的计数解决方案：
 实现插槽类 
@@ -89,7 +56,7 @@ Slot {id, num}
 实体的旋转工具（增加一个旋转按键，标识当前的旋转方向，激活能旋转选择中的实体）
 镜头控制
 UI 的点击穿透问题
-
+---
 4-7
 
 昨日问题全部解决完毕
@@ -100,8 +67,8 @@ UI 的点击穿透问题
 机械爪的动画优化
 实现 BOX
 材料块叠放处理
-
-4-8 
+---
+4-8
 
 鼠标穿透问题解决 （设置射线的 layermask）
 材料块穿透问题解决（被抓取状态时关闭碰撞）
@@ -113,7 +80,7 @@ UI 的点击穿透问题
 1 实体，检查能否放入
 2 材料块 位置被占用，等待下一个位置
 3 空 可以放置
-
+---
 4-9 
 机械爪从 box 中抓取物体完成（通过 HitBox 区分碰撞物类型实现）
 
@@ -121,31 +88,34 @@ UI 的点击穿透问题
 建筑 UI
 建筑状态展示
 生产建筑的蓝图选择
-
+---
 4-10
 建筑 UI 完成
 
 处理炉子冶炼蓝图自动选择功能
+---
 
 4-11
 炉子冶炼问题解决
 
 传送带点击穿透问题
 传送带效果优化
+---
 
 4-12
 传送带点击穿透问题解决
 传送带传送效果使用动画移动物体完成
 
 处理传送带拥堵停滞问题
-
+---
 4-23
 剩余问题：
 显示： 铅笔画风格动态情况下有破绽
-gameplay：  传送带实现修改为碰撞
-            工厂实现
-            UI 通用布局整合 
-
+gameplay： 
+- 传送带实现修改为碰撞
+- 工厂实现
+- UI 通用布局整合 
+---
 4-24
 剩余问题：
 显示： 铅笔画风格动态情况下有破绽
