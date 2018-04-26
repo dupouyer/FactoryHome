@@ -3,6 +3,8 @@ using System.Collections;
 using FairyGUI;
 
 public class InputManager:MonoBehaviour{
+    public float aixLength = 100;
+
     public delegate void OnClickFloorDelegate(Vector3 point);
     private event OnClickFloorDelegate onClickFloor;
 
@@ -15,8 +17,8 @@ public class InputManager:MonoBehaviour{
     public delegate void OnDoubleClickDelegate(EntityBase entity);
     private event OnDoubleClickDelegate onDoubleClickEntity;
 
-    public delegate void OnMoveDelegate(Vector3 direction);
-    private event OnMoveDelegate onMoveDelegate;
+    public delegate void OnAxesDelegate(Vector3 direction);
+    private event OnAxesDelegate onAxesDelegate;
 
     Plane floor;
 
@@ -27,7 +29,6 @@ public class InputManager:MonoBehaviour{
     }
 
     Vector3 downP;
-    Vector3 lastMoveP;
     Vector3 upP;
     bool isClick;
     bool isMove;
@@ -41,7 +42,6 @@ public class InputManager:MonoBehaviour{
 
         if (Input.GetMouseButtonDown(0)) {
             downP = Input.mousePosition;
-            lastMoveP = downP;
         }
 
         // 处理点击
@@ -52,10 +52,10 @@ public class InputManager:MonoBehaviour{
 
         // 处理移动
         if (Input.GetMouseButton(0)) {
-            if (onMoveDelegate != null) {
-                onMoveDelegate(Vector3.Normalize(Input.mousePosition - lastMoveP));
+            if (onAxesDelegate != null) {
+                float length = Mathf.Clamp(Vector3.Distance(Input.mousePosition,downP),0,aixLength);
+                onAxesDelegate(Vector3.Normalize(Input.mousePosition - downP) * length / aixLength);
             }
-            lastMoveP = Input.mousePosition;
         }
 
         if (clickDistance < 4 && clickDistance >= 0) {
@@ -137,11 +137,11 @@ public class InputManager:MonoBehaviour{
         onDoubleClickEntity -= callback;
     }
 
-    public void addOnMove(OnMoveDelegate callback) {
-        onMoveDelegate += callback;
+    public void addOnAxes(OnAxesDelegate callback) {
+        onAxesDelegate += callback;
     }
 
-    public void removeOnMove(OnMoveDelegate callback) {
-        onMoveDelegate -= callback;
+    public void removeOnAxes(OnAxesDelegate callback) {
+        onAxesDelegate -= callback;
     }
 }

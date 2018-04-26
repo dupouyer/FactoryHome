@@ -79,6 +79,7 @@ Material:
     - _StencilOp: 0
     - _StencilReadMask: 255
     - _StencilWriteMask: 255
+    - _Thickness: 0.0281
     - _TileFactor: 1
     - _TileScale: 10
     - _UVSec: 0

@@ -5,7 +5,7 @@ using FairyGUI;
 using System;
 
 public class GameStart : MonoBehaviour {
-    public float CameraSpeed = 10f;
+    public float CameraSpeed = 5f;
 
     private void Awake() {
         UIPackage.AddPackage("UI/Common");
@@ -20,17 +20,17 @@ public class GameStart : MonoBehaviour {
     void Start () {
         // for test
         GRoot.inst.ShowWindow(new MainUI());
-        Globals.input.addOnMove(handleOnMove);
+        Globals.input.addOnAxes(handleOnAxes);
         cameraPos = Camera.main.transform.position;
     }
 
-    private void handleOnMove(Vector3 direction) {
+    private void handleOnAxes(Vector3 direction) {
         direction *= CameraSpeed * Time.deltaTime;
-        cameraPos += new Vector3(-direction.y, direction.z , direction.x);
+        cameraPos += new Vector3(direction.y, direction.z , -direction.x);
     }
 
     // Update is called once per frame
     void Update () {
-        Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, cameraPos, 0.5f);
+        Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, cameraPos, 0.8f);
 	}
 }
