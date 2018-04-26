@@ -42,16 +42,15 @@ public class Arm : EntityBase {
             }
             else {
                 EntityBase box = cargoBuffer.entity;
-                cargo = box.outSlot.instantiateEntity(false, box.gameObject.transform.position, false);
+                cargo = box.outSlot.instantiateEntity(false, box.gameObject.transform.position);
             }
 
-            cargo.GetComponent<Collider>().enabled = false;
             // 货物绑定在手指上
             cargo.transform.SetParent(fingerPoint);
             cargo.transform.localPosition = Vector3.zero;
             EntityBase cargoEntity = cargo.GetComponent<EntityBase>();
             if (cargoEntity) {
-                cargoEntity.flag = Globals.FLAG_IDLE;
+                cargoEntity.flag = GetInstanceID();
             }
             isWorking = true;
         }
@@ -60,6 +59,7 @@ public class Arm : EntityBase {
             if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1.0f) {
                 // 新加入的货物是第三个 child
                 GameObject cargo = fingerPoint.GetChild(2).gameObject;
+                EntityBase cargoEntity = cargo.GetComponent<EntityBase>();
 
                 // 目标位置有实体，尝试放入实体中
                 if (target.entity) {
@@ -70,11 +70,26 @@ public class Arm : EntityBase {
                         // 在下一帧继续尝试
                     }
                 }
+                // 目标位置是一个传送带，检查碰撞，判断能否放入
+                else if (target.transport) {
+                    if (target.materials.Count == 0) {
+                        // 从手指上移除
+                        cargo.transform.SetParent(null);
+                        if (cargoEntity) {
+                            cargoEntity.flag = Globals.FLAG_IDLE;
+                        }
+                        isWorking = false;
+                    }
+                    else {
+                        // 在下一帧继续尝试
+                    }
+                }
                 else {
                     // 从手指上移除
                     cargo.transform.SetParent(null);
-
-                    cargo.GetComponent<Collider>().enabled = true;
+                    if (cargoEntity) {
+                        cargoEntity.flag = Globals.FLAG_IDLE;
+                    }
                     isWorking = false;
                 }
             }

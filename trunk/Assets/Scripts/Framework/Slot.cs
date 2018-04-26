@@ -8,6 +8,7 @@ public class Slot {
 
     public void pushEntity(GameObject gameObject) {
         Entity entity = Globals.entityManager.getEntityByGameObject(gameObject);
+        gameObject.GetComponent<EntityBase>().flag = Globals.FLAG_IDLE;
         if (entity == null) {
             Debug.LogError("a surprised gameobject push to entity !");
             return;
@@ -48,14 +49,14 @@ public class Slot {
         toSlot.entity = entity;
     }
 
-    public GameObject instantiateEntity(bool isArch, Vector3 pos, bool colliderEnable = true) {
+    public GameObject instantiateEntity(bool isArch, Vector3 pos) {
         if (!checkAvailable()) {
             Debug.LogError("can't instantiateEntity from a empty slot");
             return null;
         }
 
         num -= 1;
-        return Globals.entityManager.instantiateEntity(entity, isArch, pos, colliderEnable);
+        return Globals.entityManager.instantiateEntity(entity, isArch, pos);
     }
 
     public bool checkAvailable() {

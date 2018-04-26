@@ -50,7 +50,9 @@ public class EntityManager {
 
     public Entity destory(EntityBase entityBase) {
         Entity entity = getEntityByGameObject(entityBase.gameObject);
-        GameObject.Destroy(entityBase.gameObject);
+        // 移走再延迟销毁，保证触发 Trigger
+        entityBase.gameObject.transform.position = Vector3.up * 100;
+        Object.Destroy(entityBase.gameObject,0.1f);
         return destory(entity.id, 1);
     }
 
@@ -70,10 +72,9 @@ public class EntityManager {
 
     public EntityBase.DIRECTION defaultDir = EntityBase.DIRECTION.LEFT;
 
-    public GameObject instantiateEntity(Entity entity, bool isArch, Vector3 pos, bool colliderEnable) {
+    public GameObject instantiateEntity(Entity entity, bool isArch, Vector3 pos) {
         // 实例化显示对象
         GameObject gobj = Object.Instantiate(isArch && entity.config.archPrefab ? entity.config.archPrefab : entity.config.meterialPrefab);
-        gobj.GetComponent<Collider>().enabled = colliderEnable;
         pos.y += entity.config.offsetY;
         gobj.transform.position = pos;
         gobj.GetComponent<EntityBase>().changeDirection(defaultDir);

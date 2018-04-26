@@ -50,11 +50,9 @@ public class MiningDrill : EntityBase {
     void produce() {
         Globals.entityManager.CreateToSlot(ore.id, 1, outSlot);
 
-        EntityBase oreEntity = outSlot.instantiateEntity(false, transform.position + Vector3.forward, false).GetComponent<EntityBase>();
+        EntityBase oreEntity = outSlot.instantiateEntity(false, transform.position + Vector3.forward).GetComponent<EntityBase>();
 
         Vector3 offset = Vector3.right * Random.Range(-0.25f, 0.25f);
         oreEntity.gameObject.transform.position = outHitBox.transform.TransformPoint(offset);
-
-        oreEntity.gameObject.GetComponent<Collider>().enabled = true;
     }
 }
