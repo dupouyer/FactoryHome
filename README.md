@@ -1,5 +1,6 @@
 # Screenshots
-![image](https://github.com/dupouyer/FactoryHome/blob/master/screenshots/IMG_7546.PNG)
+![image](https://github.com/dupouyer/FactoryHome/blob/master/screenshots/IMG_7553.PNG)
+![image](https://github.com/dupouyer/FactoryHome/blob/master/screenshots/IMG_7554.PNG)
 
 # Framework
 ---
